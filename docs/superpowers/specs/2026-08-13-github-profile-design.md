@@ -2,16 +2,29 @@
 
 ## Goal
 
-Create a personal GitHub Profile README for `tangyixiao` that feels recognizably personal rather than like a generic developer template.
+Create a concise, bilingual GitHub Profile README for `tangyixiao` that acts as the entry point to a broader personal web presence.
 
-The page should present four core identities clearly:
+The README should communicate four core identities within a few seconds:
 
 - High school student at Shaoxing No.1 High School
 - OI / competitive programming enthusiast
 - Mathematics and physics learner
 - AI / open-source explorer
 
-The design should be bilingual where useful, with Chinese as the primary language and concise English labels for international readability.
+Chinese and English are both first-class content languages. The README should not merely append English labels to Chinese sections; core identity, section titles, and key descriptions should be presented bilingually.
+
+## Role in the Overall System
+
+The GitHub Profile README is the compact public-facing card.
+
+It should:
+
+- introduce Tang Yixiao quickly
+- highlight representative interests and projects
+- surface competitive-programming progress
+- link outward to the full personal website at `tangyixiao.github.io`
+
+It should not try to reproduce the full visual and interactive website inside GitHub Markdown.
 
 ## Visual Direction
 
@@ -19,41 +32,46 @@ Style: student/OI personalized, clean, modern, slightly dynamic.
 
 Principles:
 
-- Dark-mode friendly
-- Blue / cyan / violet technology feel
-- Moderate use of badges and dynamic cards
-- No school badge or school emblem
-- No excessive animation
-- No cluttered wall of badges
-- No generic self-praise or inflated claims
-- Mobile-friendly GitHub Markdown layout
+- dark-mode friendly
+- blue / cyan / violet technology feel where external cards or SVGs are used
+- restrained badges and dynamic cards
+- no school badge or school emblem
+- no excessive animation
+- no cluttered wall of badges
+- no generic self-praise or inflated claims
+- mobile-friendly GitHub Markdown layout
 
 ## Page Structure
 
 ### 1. Hero
 
-Centered introduction:
+Centered bilingual introduction:
 
-- `Hi, I'm 唐一潇 / Tang Yixiao 👋`
-- Short identity line such as:
-  - `High School Student · OI / Competitive Programming · Mathematics · AI`
-- A restrained typing-animation line may be used for rotating interests.
+- `唐一潇 / Tang Yixiao`
+- `高中生 · OI / 信息学竞赛 · 数学与物理 · AI`
+- `High School Student · Competitive Programming · Mathematics & Physics · AI`
 
-The hero should immediately communicate who the profile belongs to without taking too much vertical space.
+A restrained typing-animation image may be used if it remains readable and does not dominate the page.
 
-### 2. About Me
+The main call to action should link to the personal website:
 
-Short bilingual introduction focused on current interests:
+- `访问个人主页 / Visit My Website`
 
-- Student at Shaoxing No.1 High School
-- Learning and practicing algorithms / OI
-- Interested in mathematics and physics
-- Exploring AI, LLMs, agents, and open-source projects
-- Building notes, tools, templates, and code repositories
+### 2. About / 关于我
 
-Keep this section compact and factual.
+Keep the section short and factual.
 
-### 3. Skills & Interests
+Suggested content themes:
+
+- studying at Shaoxing No.1 High School
+- learning and practicing algorithms / OI
+- interested in mathematics and physics
+- exploring AI, LLMs, agents, and open-source projects
+- maintaining notes, code, learning resources, and templates
+
+Both language versions should carry equivalent meaning rather than one being a partial translation.
+
+### 3. Skills & Interests / 技术与兴趣
 
 Use a controlled set of shields/icons for:
 
@@ -67,56 +85,64 @@ Use a controlled set of shields/icons for:
 - Physics
 - AI / LLM / Agent
 
-Avoid presenting every technology encountered in forked repositories as a personal skill.
+Avoid presenting technologies from forked repositories as personal skills unless they clearly reflect current work.
 
-### 4. Featured Projects
+### 4. Featured Projects / 精选项目
 
 Highlight a small number of repositories that best represent the profile:
 
 1. `Code`
-   - OI / competitive programming code and learning archive
+   - 算法竞赛代码与学习记录
+   - Competitive programming solutions and notes
 2. `HighSchoolMathematics`
-   - High school mathematics materials and notes
+   - 高中数学资料与学习整理
+   - High-school mathematics notes and resources
 3. `Agent-Learning-Hub`
-   - AI / agent learning materials
+   - AI Agent 与大模型学习资料
+   - Learning materials for AI agents and LLMs
 4. `Shaoxing-No.1-High-School-LaTeX-Beamer-Template`
+   - 绍兴一中 LaTeX Beamer 演示文稿模板
    - A LaTeX Beamer presentation template for Shaoxing No.1 High School
 5. `tangyixiao.github.io`
-   - Personal website / web experiments
+   - 个人网站与实验性页面入口
+   - Personal website and web experiments
 
-Use text links or compact repository cards. Avoid listing all repositories.
+Use text links or compact cards. Avoid listing every repository.
 
-### 5. Competitive Programming
+### 5. Competitive Programming / 信息学竞赛
 
-Include links and dynamic rating images already associated with the user where reliable:
+Include a compact set of relevant links and progress indicators:
 
-- Luogu profile / blog
-- AtCoder rating card
-- Codeforces rating card
+- Luogu
+- AtCoder
+- Codeforces
+- GitHub code archive
 
-Preserve only a few meaningful milestones rather than the full historical list. Suggested milestones:
+Use dynamic rating cards only where the public endpoints are reliable and visually consistent.
+
+Preserve only a few meaningful milestones, for example:
 
 - `2026.01 — 1000 AC`
 - `2026.06 — 2000 AC`
 
-This section should feel like a record of progress, not a leaderboard wall.
+Do not copy the full historical milestone log into the profile.
 
-### 6. GitHub Activity
+### 6. GitHub Activity / GitHub 活动
 
-Use at most two or three dynamic widgets/cards, for example:
+Use at most two or three cards, such as:
 
 - GitHub stats
-- Top languages
-- Contribution streak
+- top languages
+- contribution streak
 
-Prefer services with stable public endpoints. The layout should degrade gracefully if a third-party card provider is unavailable.
+Prefer stable public providers and a layout that remains understandable if a third-party image endpoint fails.
 
-### 7. Find Me
+### 7. Find Me / 找到我
 
-Provide a compact set of personal links:
+Provide a compact set of links:
 
-- GitHub
 - Personal website
+- GitHub
 - Luogu
 - Blog Garden / cnblogs
 - CSDN
@@ -126,34 +152,34 @@ Do not expose the GitHub account email address in the README.
 
 ### 8. Footer
 
-Use a short personal closing line:
+Use a short bilingual closing:
 
 > 心有所向，日复一日，必有精进。
-
-And optionally:
-
+>
 > Stay curious. Keep building.
 
-No large decorative footer image is required.
+## Implementation Constraints
 
-## Content Sources
-
-The implementation may reuse useful links from the existing `Code/README.md`, but should not copy its long quote collection or full milestone log into the profile.
-
-The current profile README is still the default GitHub template and can be replaced entirely.
-
-## Technical Constraints
-
-- Implement entirely in `README.md` using GitHub-flavored Markdown and safe inline HTML where needed.
-- Do not require JavaScript.
+- Implement in `README.md` using GitHub-flavored Markdown and safe inline HTML only.
+- Do not depend on custom CSS or JavaScript inside the README because GitHub sanitizes unsupported markup and styles.
 - Keep external image dependencies limited.
-- Use URLs that work in both GitHub light and dark themes when possible.
-- Keep image widths responsive and avoid layouts that break on mobile.
+- Prefer light/dark-theme compatible cards when available.
 - Avoid private information.
 - Do not include a school emblem.
 
+## Relationship to Personal Website
+
+The README and website should share:
+
+- the same bilingual identity statement
+- the same project selection
+- the same blue/cyan/violet visual tone
+- the same major external links
+
+The README should deliberately remain lighter and more maintainable than the website.
+
 ## Success Criteria
 
-The finished profile should let a visitor understand within a few seconds that Tang Yixiao is a high-school student focused on OI/algorithms, mathematics, and AI.
+A visitor should understand within a few seconds that Tang Yixiao is a high-school student focused on OI/algorithms, mathematics, physics, and AI.
 
-It should look polished and personal, but remain readable, maintainable, and noticeably less cluttered than common badge-heavy GitHub profile templates.
+The profile should look polished and personal, use Chinese and English equally for core content, and strongly direct interested visitors toward the full personal website without becoming a badge-heavy template.
