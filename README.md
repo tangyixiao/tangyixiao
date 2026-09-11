@@ -54,8 +54,6 @@
 I treat competitive programming as a long-term learning project: algorithms, data structures, implementation, review, and documentation.
 
 - 🟢 **Luogu** — [博客 / Blog](https://www.luogu.com.cn/blog/TangyixiaoQAQ/)
-- 🔵 **AtCoder** — [tangyixiao](https://atcoder.jp/users/tangyixiao)
-- 🔷 **Codeforces** — [TangyixiaoQAQ](https://codeforces.com/profile/TangyixiaoQAQ)
 - 💻 **Code Archive** — [github.com/tangyixiao/Code](https://github.com/tangyixiao/Code)
 
 **Selected milestones / 部分里程碑**
@@ -63,10 +61,6 @@ I treat competitive programming as a long-term learning project: algorithms, dat
 - `2026.01` — **1000 AC**
 - `2026.06` — **2000 AC**
 
-<div align="center">
-  <img src="https://atrating.baoshuo.dev/rating?username=tangyixiao" alt="AtCoder rating" height="90" />
-  <img src="https://cfrating.baoshuo.dev/rating?username=TangyixiaoQAQ" alt="Codeforces rating" height="90" />
-</div>
 
 ## GitHub 活动 / GitHub Activity
 
