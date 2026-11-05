@@ -2,10 +2,33 @@
   "repo": "tangyixiao/tangyixiao",
   "sourceBranch": "main",
   "sourceCommit": "62a1975976e41d07f0721334a83a3167dc2c7ba2",
+  "designVersion": 3,
+  "direction": {
+    "visualConcept": "群青墨、冷银纸与明亮杏色的个人研究札记：名字作为窄幅竖向签名，OI、数学物理、AI 三个兴趣方向以不同尺寸的纸面和代码片在空间交错，主要入口仍指向既有个人主页。事实边界：内容来自公开 profile README，不增加奖项、职位、项目成果、照片或未经披露的身份细节。",
+    "layout": "folio",
+    "palette": {
+      "light": {
+        "bg": "#DFE3EF",
+        "surface": "#F1EBDD",
+        "ink": "#263046",
+        "muted": "#5b647d",
+        "accent": "#364e86"
+      },
+      "dark": {
+        "bg": "#171E2F",
+        "surface": "#252E45",
+        "ink": "#ECEBD9",
+        "muted": "#a5b0cb",
+        "accent": "#abc1ee"
+      }
+    },
+    "threeConcept": "Three.js 制作一叠群青封面的研究纸页，三块嵌入纸面的真实兴趣标签形成稳定构图；数学与代码仅作有来源或明确示意的短片，不伪造研究论文。",
+    "distinctiveInteraction": "选择兴趣标签，纸页轻转到相应公开项目入口；“访问个人主页”始终是主动作，介绍页不替换已有 tangyixiao.github.io。"
+  },
   "media": [],
   "skills": [
     "baoyu-design",
     "design-taste-frontend"
   ],
-  "design": "content-first source/product/photography; no rejected template or faux 3D"
+  "flagshipModel": null
 }
