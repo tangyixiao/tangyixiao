@@ -1,0 +1,18 @@
+{
+  "type": "design",
+  "designSystems": [],
+  "primaryDesignSystem": null,
+  "assets": {
+    "唐一潇": {
+      "versions": [
+        {
+          "path": "index.html",
+          "createdAt": "2026-11-05T13:19:46.370Z",
+          "status": "needs-review"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-11-05T13:19:46.370Z",
+  "updatedAt": "2026-11-05T13:57:11.308Z"
+}
