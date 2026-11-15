@@ -89,5 +89,13 @@ class ProfileReadmeTests(unittest.TestCase):
         self.assertEqual(set(re.findall(pattern, self.text)),
                          set(re.findall(pattern, self.english)))
 
+    def test_github_cards_and_project_previews(self):
+        for document in [self.text, self.english]:
+            self.assertIn("github-readme-stats-one-bice.vercel.app/api?", document)
+            self.assertIn("/api/top-langs/", document)
+            self.assertIn("streak-stats.demolab.com", document)
+            for image in ["csp-preview.png", "blackhole-preview.png", "drawai-preview.png"]:
+                self.assertIn("assets/" + image, document)
+
 if __name__ == "__main__":
     unittest.main()

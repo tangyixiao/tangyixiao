@@ -14,6 +14,40 @@
 
 ---
 
+## GitHub 活动
+
+<p align="center">
+<a href="https://github.com/tangyixiao">
+<picture>
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-readme-stats-one-bice.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;hide_rank=true">
+<source media="(max-width: 640px)" srcset="https://github-readme-stats-one-bice.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;hide_rank=true">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-one-bice.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-readme-stats-one-bice.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="GitHub 总览：Stars、Commits、PR、Issues 与参与仓库">
+</picture>
+</a>
+<a href="https://github.com/tangyixiao?tab=repositories">
+<picture>
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=tangyixiao&amp;layout=compact&amp;langs_count=8&amp;card_width=300&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<source media="(max-width: 640px)" srcset="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=tangyixiao&amp;layout=compact&amp;langs_count=8&amp;card_width=300&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=tangyixiao&amp;layout=compact&amp;langs_count=8&amp;card_width=450&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=tangyixiao&amp;layout=compact&amp;langs_count=8&amp;card_width=450&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="公开仓库语言分布">
+</picture>
+</a>
+</p>
+
+<p align="center">
+<a href="https://github.com/tangyixiao">
+<picture>
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=390&amp;card_height=195&amp;background=0D1117&amp;border=30363D&amp;stroke=30363D&amp;ring=759180&amp;fire=759180&amp;currStreakNum=C5CDD7&amp;sideNums=C5CDD7&amp;currStreakLabel=9DB9D1&amp;sideLabels=9DB9D1&amp;dates=A5B0BD">
+<source media="(max-width: 640px)" srcset="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=390&amp;card_height=195&amp;background=FFFFFF&amp;border=D9E1E8&amp;stroke=D9E1E8&amp;ring=759180&amp;fire=759180&amp;currStreakNum=455467&amp;sideNums=455467&amp;currStreakLabel=45648A&amp;sideLabels=45648A&amp;dates=65758A">
+<source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=840&amp;card_height=195&amp;background=0D1117&amp;border=30363D&amp;stroke=30363D&amp;ring=759180&amp;fire=759180&amp;currStreakNum=C5CDD7&amp;sideNums=C5CDD7&amp;currStreakLabel=9DB9D1&amp;sideLabels=9DB9D1&amp;dates=A5B0BD">
+<img src="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=840&amp;card_height=195&amp;background=FFFFFF&amp;border=D9E1E8&amp;stroke=D9E1E8&amp;ring=759180&amp;fire=759180&amp;currStreakNum=455467&amp;sideNums=455467&amp;currStreakLabel=45648A&amp;sideLabels=45648A&amp;dates=65758A" width="795" alt="总贡献数、当前连续贡献与最长连续贡献">
+</picture>
+</a>
+</p>
+
+<sub>卡片由外部服务生成，可能有缓存；语言占比按公开仓库代码量统计，也会包含归档资料。</sub>
+
 ## 最近的几个进展
 
 这段时间在继续整理 CSP 资料，也在维护 OJ 工具、AI 编程工作流和学习技能。下面是截至 **2026-11-15** 的几条公开发布记录：
@@ -31,6 +65,8 @@
 
 **[CSP-2026](https://github.com/tangyixiao/CSP-2026)**<br>
 CSP-J/S 2026 试题与选手文件归档。支持在线阅读试题、浏览代码、并排或行内对比，以及按需下载；适合赛后查资料、看实现和做复盘。
+
+<a href="https://tangyixiao.github.io/CSP-2026/"><img src="assets/csp-preview.png" width="800" alt="CSP-2026 在线归档的实际页面"></a>
 
 [在线归档](https://tangyixiao.github.io/CSP-2026/) · [试题 PDF](https://tangyixiao.github.io/CSP-2026/papers/) · [代码阅读与对比](https://tangyixiao.github.io/CSP-2026/code/)
 
@@ -86,10 +122,14 @@ DeepSeek Harness 的 WorkBuddy 社区连接插件。沿用 WorkBuddy / WorkBuddy
 **[个人网站](https://tangyixiao.github.io/) / [源码](https://github.com/tangyixiao/tangyixiao.github.io)**<br>
 用来放项目、博客和一些独立运行的小实验。除了页面和交互本身，也在琢磨怎样把数学、物理里的现象画出来，让人可以动手试一试。
 
+<a href="https://tangyixiao.github.io/blackhole.html"><img src="assets/blackhole-preview.png" width="800" alt="个人网站黑洞可视化实验的实际运行画面"></a>
+
 🌌 [黑洞与引力透镜](https://tangyixiao.github.io/blackhole.html) · [三体引力实验](https://tangyixiao.github.io/threebody.html) · [双摆与混沌](https://tangyixiao.github.io/thechao.html)
 
 **[DrawAI Video Studio](https://github.com/tangyixiao/drawai-video-studio)**<br>
 基于 Remotion / React 的视频制作 skill，从参考、分镜和短片试做到可编辑场景、渲染与画面检查。也在尝试把讲解和演示做成更容易看懂的表达。
+
+<a href="https://github.com/tangyixiao/drawai-video-studio/tree/main/examples/paper-storyboard"><img src="assets/drawai-preview.png" width="800" alt="DrawAI 纸面分镜视频示例的一帧"></a>
 
 ## 写过的一些东西
 
