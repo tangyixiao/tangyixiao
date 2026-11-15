@@ -91,7 +91,7 @@ class ProfileReadmeTests(unittest.TestCase):
 
     def test_github_cards_and_project_previews(self):
         for document in [self.text, self.english]:
-            self.assertIn("github-readme-stats-one-bice.vercel.app/api?", document)
+            self.assertIn("github-stats-extended.vercel.app/api?", document)
             self.assertIn("/api/top-langs/", document)
             self.assertIn("streak-stats.demolab.com", document)
             for image in ["csp-preview.png", "blackhole-preview.png", "drawai-preview.png"]:
