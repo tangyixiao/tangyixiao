@@ -32,9 +32,16 @@ class ProfileReadmeTests(unittest.TestCase):
 
     def test_featured_projects(self):
         for url in [
-            "https://github.com/tangyixiao/Code",
-            "https://github.com/tangyixiao/HighSchoolMathematics",
-            "https://github.com/tangyixiao/Agent-Learning-Hub",
+            "https://github.com/tangyixiao/CSP-2026",
+            "https://github.com/tangyixiao/OJ-NEXUS",
+            "https://github.com/tangyixiao/oi-coach",
+            "https://github.com/tangyixiao/evidence-learning",
+            "https://github.com/tangyixiao/dsh-workbuddy-connect-community",
+            "https://github.com/tangyixiao/dsh-pr-release-workspace",
+            "https://github.com/tangyixiao/dsh-plugin-market",
+            "https://github.com/tangyixiao/HarnessHub",
+            "https://github.com/tangyixiao/drawai-video-studio",
+            "https://github.com/tangyixiao/tangyixiao.github.io",
             "https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template",
         ]:
             self.assertIn(url, self.text)
@@ -52,6 +59,14 @@ class ProfileReadmeTests(unittest.TestCase):
     def test_selected_milestones(self):
         for token in ["2026.01", "1000 AC", "2026.06", "2000 AC"]:
             self.assertIn(token, self.text)
+
+    def test_unavailable_repository_links_removed(self):
+        for url in [
+            "https://github.com/tangyixiao/Code",
+            "https://github.com/tangyixiao/HighSchoolMathematics",
+            "https://github.com/tangyixiao/Agent-Learning-Hub",
+        ]:
+            self.assertNotIn(url, self.text)
 
     def test_private_email_not_exposed(self):
         self.assertNotIn("37662981@qq.com", self.text)

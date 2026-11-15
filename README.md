@@ -7,7 +7,7 @@
 
 [![Website](https://img.shields.io/badge/访问个人主页_Visit_My_Website-0ea5e9?style=for-the-badge&logo=githubpages&logoColor=white)](https://tangyixiao.github.io/)
 
-<sub>在算法、数学与智能之间持续探索。 · Exploring algorithms, mathematics and intelligence.</sub>
+<sub>学习算法，探索数学与物理，也把 AI 用进自己的工具与学习流程。 · Studying algorithms, mathematics and physics, and building with AI.</sub>
 
 </div>
 
@@ -18,17 +18,19 @@
 - 🏫 就读于 **绍兴市第一中学**，目前主要关注信息学竞赛、数学、物理与人工智能。
   
   I am a student at **Shaoxing No.1 High School**, currently focusing on competitive programming, mathematics, physics, and AI.
-- 🧩 喜欢用代码解决问题，持续整理算法竞赛代码、学习笔记和技术资料。
+- 🧩 持续学习算法与数据结构，整理竞赛资料，并开发 OJ 工具；也把教学、复盘与延迟复测的方法整理成可复用的学习技能。
   
-  I enjoy solving problems with code and maintaining contest solutions, study notes, and technical resources.
-- 🤖 正在探索 **LLM、AI Agent 与开源项目**，也喜欢把学习成果做成可复用的工具与模板。
+  I study algorithms and data structures, organize contest resources, and build OJ tools. I also turn teaching, review, and delayed practice methods into reusable learning skills.
+- 🤖 正在开发 **AI 编程工具、DeepSeek Harness 社区插件与代码驱动的视频制作技能**，关注从项目、会话管理到实际使用的完整流程。
   
-  I am exploring **LLMs, AI agents, and open source**, and I like turning what I learn into reusable tools and templates.
+  I am building **AI coding tools, community plugins for DeepSeek Harness, and a skill for code-driven video production**, with a focus on practical project and session workflows.
 
 ## 技术与兴趣 / Skills & Interests
 
 <p>
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX" />
   <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" alt="Markdown" />
@@ -42,11 +44,17 @@
 
 | 项目 / Project | 介绍 / Description |
 |---|---|
-| **[Code](https://github.com/tangyixiao/Code)** | 算法竞赛代码与学习记录。<br>Competitive programming solutions and notes. |
-| **[HighSchoolMathematics](https://github.com/tangyixiao/HighSchoolMathematics)** | 高中数学资料与学习整理。<br>High-school mathematics notes and resources. |
-| **[Agent-Learning-Hub](https://github.com/tangyixiao/Agent-Learning-Hub)** | AI Agent 与大模型学习资料。<br>Learning materials for AI agents and LLMs. |
-| **[Shaoxing-No.1-High-School-LaTeX-Beamer-Template](https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template)** | 绍兴一中 LaTeX Beamer 演示文稿模板。<br>A LaTeX Beamer presentation template for Shaoxing No.1 High School. |
-| **[tangyixiao.github.io](https://github.com/tangyixiao/tangyixiao.github.io)** | 个人网站、学习资源与网页实验。<br>Personal website, learning resources, and web experiments. |
+| **[CSP-2026](https://github.com/tangyixiao/CSP-2026)** | CSP-J/S 2026 试题与选手文件归档，支持在线阅读、代码对比与下载。<br>CSP-J/S 2026 papers and contestant files, with online reading, code comparison, and downloads. |
+| **[OJ NEXUS](https://github.com/tangyixiao/OJ-NEXUS)** | 以 Android 为主的多 OJ 客户端，整合账号、提交、题目、训练与复盘；其他平台持续开发中。<br>A multi-OJ client primarily for Android, covering accounts, submissions, problems, training, and review, with other platforms in development. |
+| **[oi-coach](https://github.com/tangyixiao/oi-coach) · [evidence-learning](https://github.com/tangyixiao/evidence-learning)** | 面向信息学与高中学习的教学技能：分级提示、代码批改、复盘与延迟复测。<br>Teaching skills for competitive programming and high-school study: graded hints, code review, reflection, and delayed practice. |
+| **[WorkBuddy Connect Community](https://github.com/tangyixiao/dsh-workbuddy-connect-community)** | DeepSeek Harness 社区插件，沿用 WorkBuddy / WorkBuddy AI 桌面登录，接入模型与用量观测。<br>A community plugin for DeepSeek Harness that reuses WorkBuddy / WorkBuddy AI desktop sign-in for model access and usage observations. |
+| **[Harness Hub](https://github.com/tangyixiao/HarnessHub)** | 本地优先的 AI 编程桌面控制中心，管理项目、终端会话与使用量记录。<br>A local-first desktop hub for AI coding projects, terminal sessions, and usage records. |
+| **[DrawAI Video Studio](https://github.com/tangyixiao/drawai-video-studio)** | 基于 Remotion / React 的视频制作技能，从参考与短片试做到可编辑场景、渲染与检查。<br>A Remotion / React video-production skill, from references and a short pilot to editable scenes, rendering, and checks. |
+| **[绍兴一中 Beamer 模板 / Beamer Template](https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template)** | 绍兴一中 LaTeX Beamer 演示文稿模板。<br>A LaTeX Beamer presentation template for Shaoxing No.1 High School. |
+| **[个人网站 / Personal Website](https://github.com/tangyixiao/tangyixiao.github.io)** | 个人主页、博客、太阳系探索器与 WebGL 实验。<br>My homepage, blog, solar-system explorer, and WebGL experiments. |
+
+更多 DSH 工具：[PR & Release Workspace](https://github.com/tangyixiao/dsh-pr-release-workspace) · [插件市场 / Plugin Market](https://github.com/tangyixiao/dsh-plugin-market)<br>
+More DSH tools: pull-request and release workflows, and a public plugin index.
 
 ## 信息学竞赛 / Competitive Programming
 
@@ -54,23 +62,19 @@
 I treat competitive programming as a long-term learning project: algorithms, data structures, implementation, review, and documentation.
 
 - 🟢 **Luogu** — [博客 / Blog](https://www.luogu.com.cn/blog/TangyixiaoQAQ/)
-- 💻 **Code Archive** — [github.com/tangyixiao/Code](https://github.com/tangyixiao/Code)
+- 📚 **CSP-2026** — [试题与选手文件 / Papers & Contestant Files](https://tangyixiao.github.io/CSP-2026/)
+- 🛠️ **OJ NEXUS** — [训练与复盘工具 / Training & Review Tool](https://github.com/tangyixiao/OJ-NEXUS)
 
 **Selected milestones / 部分里程碑**
 
 - `2026.01` — **1000 AC**
 - `2026.06` — **2000 AC**
 
-
 ## GitHub 活动 / GitHub Activity
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tangyixiao&show_icons=true&hide_border=true&bg_color=00000000&title_color=38bdf8&text_color=64748b&icon_color=8b5cf6" alt="GitHub stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tangyixiao&layout=compact&hide_border=true&bg_color=00000000&title_color=38bdf8&text_color=64748b" alt="Top languages" height="165" />
-</div>
-
-> 这些统计卡片只是补充信息；真正想了解我在做什么，可以直接看上面的项目与个人网站。  
-> These cards are only supplementary — the projects above and my personal website are the better way to see what I am working on.
+- [公开项目 / Public Repositories](https://github.com/tangyixiao?tab=repositories)
+- [近期提交 / Recent Commits](https://github.com/search?q=author%3Atangyixiao&type=commits)
+- [Pull Requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
 
 ## 找到我 / Find Me
 
@@ -91,3 +95,4 @@ I treat competitive programming as a long-term learning project: algorithms, dat
 > **Stay curious. Keep building.**
 
 </div>
+
