@@ -1,0 +1,16 @@
+[
+ {"slug":"dsh-workbuddy-connect-community","title":"WorkBuddy Connect Community","release":true,"zh":["在 DeepSeek Harness 中接入 WorkBuddy，","沿用桌面登录，连接模型与上下文选项。"],"en":["WorkBuddy access in DeepSeek Harness,","using desktop sign-in and context options."]},
+ {"slug":"dsh-pr-release-workspace","title":"PR & Release Workspace","release":true,"zh":["阅读 PR 与差异，保留本地笔记，","核对版本与发布记录。"],"en":["Read PRs and diffs, keep local notes,","and check versions and release records."]},
+ {"slug":"drawai-video-studio","title":"DrawAI Video Studio","release":true,"zh":["用 Remotion / React 制作视频，","从分镜、可编辑场景到渲染与画面检查。"],"en":["Make videos with Remotion and React,","from storyboards to rendering and review."]},
+ {"slug":"OJ-NEXUS","title":"OJ NEXUS","release":true,"zh":["Android 多 OJ 客户端，集中管理账号、","题目、提交、比赛与训练记录。"],"en":["An Android client for multiple judges:","accounts, problems, contests and training."]},
+ {"slug":"CSP-2026","title":"CSP-2026","zh":["CSP-J/S 2026 试题与选手文件归档，","支持在线阅读、代码对比与按需下载。"],"en":["CSP-J/S 2026 papers and contestant files,","with online reading and code comparison."]},
+ {"slug":"oi-coach","title":"oi-coach","zh":["面向 OI 的教学技能：讲解与分级提示、","代码批改、训练反馈和赛后复盘。"],"en":["An OI coaching skill: explanations, hints,","code review and post-contest reflection."]},
+ {"slug":"evidence-learning","title":"evidence-learning","zh":["整理学习证据、复习与延迟复测，","让学习记录能在之后继续用上。"],"en":["Study evidence, review and delayed practice,","keeping learning records useful over time."]},
+ {"slug":"HarnessHub","title":"Harness Hub","zh":["本地优先的 AI 编程桌面控制中心，","管理项目、Harness、终端会话与 Git 变更。"],"en":["A local-first desktop hub for AI coding:","projects, harnesses, sessions and Git changes."]},
+ {"slug":"dsh-plugin-market","title":"DSH Plugin Market","zh":["DeepSeek Harness 社区插件索引，","查看插件来源、版本与安装入口。"],"en":["A community DeepSeek Harness plugin index,","with sources, versions and install links."]},
+ {"slug":"dsh-plugins-sync","title":"dsh-plugins-sync","zh":["汇集多来源插件目录与快照，","核对版本、通道和冲突。"],"en":["Plugin catalogs and snapshots from sources,","with version, channel and conflict checks."]},
+ {"slug":"tangyixiao.github.io","title":"Personal website","zh":["项目、博客与独立运行的小实验，","也用可视化探索数学和物理现象。"],"en":["Projects, posts and independent experiments,","exploring mathematics and physics visually."]},
+ {"slug":"dsh-provider-doctor","title":"Provider Doctor","zh":["沿宿主、安装、注册与凭据等环节，","定位模型连接问题。"],"en":["Diagnose model connections through the host,","installation, registration and credentials."]},
+ {"slug":"dsh-version-manager","title":"Version Manager","zh":["查看插件与 Skills 的实际安装状态，","检查更新预览和快照。"],"en":["Inspect installed plugins and skills,","with update previews and snapshots."]},
+ {"slug":"dsh-zcode-plan-bridge","title":"ZCode Plan Bridge","zh":["将 DSH 的模型请求交给本机","已经登录的 ZCode CLI。"],"en":["Route DSH model requests through the local,","already signed-in ZCode CLI."]}
+]
