@@ -3,6 +3,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
 
@@ -82,6 +83,17 @@ class ProfileCardGeneratorTests(unittest.TestCase):
         self.assertNotIn("NaN", svg)
         with self.assertRaises(ValueError):
             cards.render_mobile_activity(days[:5])
+
+    def test_incomplete_search_is_retried_but_never_published(self):
+        complete = {"incomplete_results": False, "items": []}
+        incomplete = {"incomplete_results": True, "items": []}
+        with patch.object(cards, "github_json", side_effect=[incomplete, complete]) as query, patch.object(cards.time, "sleep"):
+            self.assertEqual(cards.complete_commit_search("search/commits?q=test"), complete)
+            self.assertEqual(query.call_count, 2)
+        with patch.object(cards, "github_json", return_value=incomplete) as query, patch.object(cards.time, "sleep"):
+            with self.assertRaises(ValueError):
+                cards.complete_commit_search("search/commits?q=test")
+            self.assertEqual(query.call_count, 3)
 
 
 if __name__ == "__main__":

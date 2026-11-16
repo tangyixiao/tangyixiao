@@ -8,6 +8,8 @@ import os
 from pathlib import Path
 import re
 import shutil
+import time
+import urllib.error
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -29,8 +31,19 @@ def github_json(endpoint):
     if os.environ.get("GITHUB_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request, timeout=30) as response:
-        body = response.read(1024 * 1024 + 1)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                body = response.read(1024 * 1024 + 1)
+            break
+        except urllib.error.HTTPError as error:
+            if attempt == 2 or error.code not in (429, 500, 502, 503, 504):
+                raise
+            time.sleep(2 ** (attempt + 1))
+        except urllib.error.URLError:
+            if attempt == 2:
+                raise
+            time.sleep(2 ** (attempt + 1))
     if len(body) > 1024 * 1024:
         raise ValueError("Public source exceeds 1 MiB limit")
     return json.loads(body)
@@ -124,9 +137,7 @@ def fetch_recent_languages():
     since = (date.today() - timedelta(days=14)).isoformat()
     query = urllib.parse.urlencode({"q": "author:tangyixiao is:public committer-date:>=" + since,
                                    "sort": "committer-date", "order": "desc", "per_page": 30})
-    search = github_json("search/commits?" + query)
-    if search.get("incomplete_results"):
-        raise ValueError("Incomplete public commit search")
+    search = complete_commit_search("search/commits?" + query)
     commits = []
     for item in search["items"][:30]:
         repository = item["repository"]
@@ -138,6 +149,16 @@ def fetch_recent_languages():
             raise ValueError("Unexpected public commit reference")
         commits.append(github_json("repos/" + full_name + "/commits/" + sha + "?per_page=100"))
     return language_totals(commits), len(commits)
+
+
+def complete_commit_search(endpoint):
+    for attempt in range(3):
+        search = github_json(endpoint)
+        if not search.get("incomplete_results"):
+            return search
+        if attempt < 2:
+            time.sleep(2 ** (attempt + 1))
+    raise ValueError("Incomplete public commit search after three attempts")
 
 
 def render_recent_languages(totals, commit_count):
