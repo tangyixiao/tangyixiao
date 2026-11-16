@@ -49,6 +49,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: tangyixiao
+          MAX_REPOS: '1000'
           SETTING_JSON: scripts/profile-cards/landscape.json
       - name: Collect generated calendars
         run: |
