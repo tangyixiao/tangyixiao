@@ -44,7 +44,7 @@ jobs:
             @media (prefers-color-scheme: dark) {
               svg { color: #c5cdd7; } h1,h2,h3 { color: #9db9d1; }
             }
-      - name: Recent languages and open-source contributions
+      - name: Open-source contributions and issue/PR status
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -53,20 +53,13 @@ jobs:
           output_action: none
           base: ''
           repositories: 100
-          plugin_languages: yes
-          plugin_languages_sections: recently-used
-          plugin_languages_indepth: no
-          plugin_languages_recent_load: 100
-          plugin_languages_recent_days: 14
-          plugin_languages_limit: 8
-          plugin_languages_analysis_timeout: 5
           plugin_notable: yes
           plugin_notable_from: all
           plugin_notable_types: commit, pull_request, issue
           plugin_notable_repositories: yes
           plugin_followup: yes
           plugin_followup_sections: repositories, user
-          config_order: languages, notable, followup
+          config_order: notable, followup
           config_timezone: Asia/Shanghai
           config_animations: no
           config_padding: 8, 8 + 0%

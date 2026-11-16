@@ -45,6 +45,21 @@ class ProfileCardGeneratorTests(unittest.TestCase):
         self.assertIn("git commit --file work/profile-card-commit.txt", workflow)
         self.assertNotIn("secrets.METRICS_TOKEN", workflow)
 
+    def test_recent_languages_count_changes_and_exclude_generator_outputs(self):
+        totals = cards.language_totals([{"files": [
+            {"filename": "src/a.ts", "additions": 4, "deletions": 3},
+            {"filename": "src/b.tsx", "additions": 2, "deletions": 0},
+            {"filename": "main.py", "additions": 5, "deletions": 1},
+            {"filename": "assets/generated/a.svg", "additions": 1000, "deletions": 0},
+            {"filename": "README.md", "additions": 500, "deletions": 0},
+        ]}])
+        self.assertEqual(totals, [("TypeScript", 9), ("Python", 6)])
+        root = ET.fromstring(cards.render_recent_languages(totals, 1))
+        text = "".join(root.itertext())
+        self.assertIn("60.0%", text)
+        self.assertIn("40.0%", text)
+        self.assertIn("1 public commits sampled", text)
+
 
 if __name__ == "__main__":
     unittest.main()
