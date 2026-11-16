@@ -178,6 +178,8 @@ These posts are currently in Chinese.
 
 ## Technologies used in my projects
 
+Some of the languages, frameworks, and tools used across my projects:
+
 <p>
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
