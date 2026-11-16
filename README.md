@@ -19,10 +19,10 @@
 <p align="center">
 <a href="https://github.com/tangyixiao">
 <picture>
-<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;hide_rank=true">
-<source media="(max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;hide_rank=true">
-<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
-<img src="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="GitHub 总览：Stars、Commits、PR、Issues 与参与仓库">
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;hide_rank=true&amp;show=prs_merged,prs_merged_percentage">
+<source media="(max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;hide_rank=true&amp;show=prs_merged,prs_merged_percentage">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;show=prs_merged,prs_merged_percentage">
+<img src="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;show=prs_merged,prs_merged_percentage" width="390" alt="GitHub 总览：Stars、Commits、PR、Issues 与参与仓库">
 </picture>
 </a>
 <a href="https://github.com/tangyixiao?tab=repositories">
@@ -44,6 +44,34 @@
 <img src="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=840&amp;card_height=195&amp;background=FFFFFF&amp;border=D9E1E8&amp;stroke=D9E1E8&amp;ring=759180&amp;fire=759180&amp;currStreakNum=455467&amp;sideNums=455467&amp;currStreakLabel=45648A&amp;sideLabels=45648A&amp;dates=65758A" width="795" alt="总贡献数、当前连续贡献与最长连续贡献">
 </picture>
 </a>
+</p>
+
+## 精选项目
+
+<p align="center">
+<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-workbuddy-connect-community&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-workbuddy-connect-community&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="dsh-workbuddy-connect-community">
+</picture></a>
+<a href="https://github.com/tangyixiao/drawai-video-studio"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=drawai-video-studio&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=drawai-video-studio&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="drawai-video-studio">
+</picture></a>
+<a href="https://github.com/tangyixiao/dsh-plugin-market"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-plugin-market&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-plugin-market&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="dsh-plugin-market">
+</picture></a>
+<a href="https://github.com/tangyixiao/tangyixiao.github.io"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=tangyixiao.github.io&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=tangyixiao.github.io&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="tangyixiao.github.io">
+</picture></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/dsh-workbuddy-connect-community?style=flat-square&amp;color=45648a&amp;label=WorkBuddy" alt="WorkBuddy"></a>
+<a href="https://github.com/tangyixiao/drawai-video-studio/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/drawai-video-studio?style=flat-square&amp;color=45648a&amp;label=DrawAI" alt="DrawAI"></a>
+<a href="https://github.com/tangyixiao/dsh-plugin-market/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/dsh-plugin-market?style=flat-square&amp;color=45648a&amp;label=Plugin%20Market" alt="Plugin Market"></a>
+<a href="https://github.com/tangyixiao/tangyixiao.github.io/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/tangyixiao.github.io?style=flat-square&amp;color=45648a&amp;label=Website" alt="Website"></a>
 </p>
 
 ## 最近的几个进展
@@ -115,6 +143,12 @@ DeepSeek Harness 的 WorkBuddy 社区连接插件。沿用 WorkBuddy / WorkBuddy
 
 </details>
 
+### 近期开发与协作
+
+<p align="center"><img src="assets/generated/recent-languages.svg" width="500" alt="近期公开代码变更中的语言"></p>
+
+<p align="center"><img src="assets/generated/development.svg" width="500" alt="开源贡献与 Issues／PR 状态"></p>
+
 ## 网站、可视化与表达
 
 **[个人网站](https://tangyixiao.github.io/) / [源码](https://github.com/tangyixiao/tangyixiao.github.io)**<br>
@@ -131,6 +165,8 @@ DeepSeek Harness 的 WorkBuddy 社区连接插件。沿用 WorkBuddy / WorkBuddy
 
 ## 写过的一些东西
 
+<p align="center"><img src="assets/generated/articles.svg" width="500" alt="公开博客的近期文章"></p>
+
 - **[从一道题，到一份可复用的题解](https://tangyixiao.github.io/blog/posts/problem-to-note.html)**<br>
   从问题模型和朴素做法出发，把观察、正确性、复杂度与边界一起写清楚。
 - **[把推导写清楚，把理解留住](https://tangyixiao.github.io/blog/posts/proof-and-notes.html)**<br>
@@ -140,19 +176,43 @@ DeepSeek Harness 的 WorkBuddy 社区连接插件。沿用 WorkBuddy / WorkBuddy
 
 ## 项目里用到的技术
 
+项目里用到的语言、框架和工具包括但不限于：
+
 <p>
-  <img src="https://img.shields.io/badge/C%2B%2B-45648A?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/TypeScript-45648A?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Python-45648A?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Kotlin-45648A?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Rust-45648A?style=flat-square&logo=rust&logoColor=white" alt="Rust">
-  <img src="https://img.shields.io/badge/LaTeX-45648A?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=flat-square&logo=python&logoColor=306998" alt="Python">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Rust-CE422B?style=flat-square&logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
 </p>
 
 - **算法与资料**：C++、Python、LaTeX、Markdown。
 - **网页与插件**：TypeScript、React、Three.js、Node.js。
 - **客户端与桌面工具**：Kotlin / Jetpack Compose、Rust / Tauri。
 - **协作与记录**：Git、GitHub、Issues、Pull Requests。
+
+## 贡献足迹
+
+### 立体贡献日历
+
+<p align="center"><img src="assets/generated/isometric.svg" width="500" alt="一整年的贡献活动"></p>
+
+### 3D 贡献景观
+
+<p align="center"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/generated/contribution-3d-dark.svg">
+<img src="assets/generated/contribution-3d-light.svg" width="800" alt="GitHub 贡献的三维景观">
+</picture></p>
+
+### 近期贡献趋势
+
+<p align="center"><picture>
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="assets/generated/activity-mobile.svg">
+<source media="(max-width: 640px)" srcset="assets/generated/activity-mobile.svg">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=tangyixiao&amp;bg_color=0d1117&amp;color=c5cdd7&amp;title_color=9db9d1&amp;line=98ad9f&amp;point=9db9d1&amp;area_color=263c32&amp;border_color=30363d&amp;area=true&amp;radius=6&amp;height=260&amp;days=31&amp;custom_title=Recent%2031%20days">
+<img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=tangyixiao&amp;bg_color=ffffff&amp;color=455467&amp;title_color=45648a&amp;line=759180&amp;point=45648a&amp;area_color=dce6e0&amp;border_color=d9e1e8&amp;area=true&amp;radius=6&amp;height=260&amp;days=31&amp;custom_title=Recent%2031%20days" width="800" alt="近期每日贡献变化">
+</picture></p>
 
 ## 在其他地方找到我
 
