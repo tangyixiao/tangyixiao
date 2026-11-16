@@ -30,7 +30,7 @@ COAUTHOR = "Co-authored-by: Tangyixiao <115929632+tangyixiao@users.noreply.githu
 COMMIT_MESSAGE = "docs: refresh generated profile cards\n\n" + COAUTHOR + "\n"
 
 
-def github_json(endpoint):
+def github_json(endpoint, max_bytes=1024 * 1024):
     url = "https://api.github.com/" + endpoint
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "tangyixiao-profile-cards"}
     if os.environ.get("GITHUB_TOKEN"):
@@ -39,7 +39,7 @@ def github_json(endpoint):
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
-                body = response.read(1024 * 1024 + 1)
+                body = response.read(max_bytes + 1)
             break
         except urllib.error.HTTPError as error:
             if attempt == 2 or error.code not in (429, 500, 502, 503, 504):
@@ -49,8 +49,8 @@ def github_json(endpoint):
             if attempt == 2:
                 raise
             time.sleep(2 ** (attempt + 1))
-    if len(body) > 1024 * 1024:
-        raise ValueError("Public source exceeds 1 MiB limit")
+    if len(body) > max_bytes:
+        raise ValueError("Public source exceeds response size limit")
     return json.loads(body)
 
 
@@ -152,7 +152,12 @@ def fetch_recent_languages():
         sha = item["sha"]
         if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", full_name) or not re.fullmatch(r"[0-9a-f]{40}", sha):
             raise ValueError("Unexpected public commit reference")
-        commits.append(github_json("repos/" + full_name + "/commits/" + sha + "?per_page=100"))
+        # This endpoint includes patches even though only file counts are needed.
+        # Allow a bounded larger response, then discard patch/source text promptly.
+        detail = github_json("repos/" + full_name + "/commits/" + sha + "?per_page=100", max_bytes=4 * 1024 * 1024)
+        commits.append({'files': [{key: file.get(key, '' if key == 'filename' else 0)
+                                   for key in ('filename', 'additions', 'deletions')}
+                                  for file in detail.get('files', [])]})
     return language_totals(commits), len(commits)
 
 

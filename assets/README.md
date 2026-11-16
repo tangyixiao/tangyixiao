@@ -29,4 +29,6 @@ The calendars use native renderers in `scripts/profile-cards/`, with projection 
 
 Lower project cards are generated from explicitly selected public repository metadata and reviewed bilingual descriptions. Language contribution charts show concrete language names without an `other` bucket. The expanded language chart uses primary repository languages weighted by public commit contributions, separately from the byte-based overview language card.
 
+The lower project cards adapt the upper [GitHub Stats Extended repo-pin](https://github.com/stats-organization/github-stats-extended/blob/master/packages/core/src/cards/repo.ts) layout, typography and vector icons, while retaining localized descriptions and real release metadata. The upstream MIT notice is retained in `licenses/github-stats-extended.txt`.
+
 The dynamic project cards use the same GitHub Stats Extended instance as the overview. Their release/last-commit badges use Shields. The recent-activity graph uses the official Workers host of [github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph). No third-party examples, manual competition statistics, or credentials are embedded in these cards.

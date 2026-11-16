@@ -5,8 +5,10 @@ import json
 import math
 from pathlib import Path
 import re
+import unicodedata
 
 PROJECTS = json.loads(Path(__file__).with_name('projects.json').read_text(encoding='utf-8'))
+PIN_ICONS = json.loads(Path(__file__).with_name('pin-icons.json').read_text(encoding='utf-8'))
 CSS = '''text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}.frame{fill:#fff;stroke:#d1d9e0}.heading{font-size:20px;font-weight:600;fill:#0969da}.meta{font-size:14px;fill:#59636e}.body{font-size:16px;fill:#1f2328}.summary{font-size:16px;fill:#1f2328}.top{stroke:#c5d3c9;stroke-width:.5;stroke-linejoin:round}.left,.right{stroke-width:.35;stroke-linejoin:round}.l0{--top:#e3e9e6;--left:#c5d0ca;--right:#d2dbd6}.l1{--top:#9be9a8;--left:#60ad75;--right:#7bc38b}.l2{--top:#40c463;--left:#258741;--right:#31a34f}.l3{--top:#30a14e;--left:#1a6f34;--right:#23843f}.l4{--top:#216e39;--left:#124b26;--right:#195b30}.top{fill:var(--top)}.left{fill:var(--left);stroke:var(--left)}.right{fill:var(--right);stroke:var(--right)}@media(prefers-color-scheme:dark){.frame{fill:#0d1117;stroke:#30363d}.heading{fill:#58a6ff}.meta{fill:#a4acb5}.body,.summary{fill:#e6edf3}.top{stroke:#424d49}.l0{--top:#2b3431;--left:#1d2521;--right:#222c27}.l1{--top:#287843;--left:#17492b;--right:#1e5c34}.l2{--top:#38a257;--left:#21673a;--right:#2b8146}.l3{--top:#56d378;--left:#2d8747;--right:#3fab5b}.l4{--top:#9be9a8;--left:#55a76a;--right:#73c587}}'''
 
 
@@ -174,24 +176,54 @@ def render_details(collection, mobile=False):
     return svg(width,height,'Languages and contribution types',body)
 
 
+def pin_text_width(value, size):
+    return sum(size if unicodedata.east_asian_width(char) in ('W','F') else
+               size*.28 if char.isspace() else size*.57 if char.isupper() else size*.5
+               for char in value)
+
+
+def pin_description(lines):
+    """Wrap the reviewed bilingual copy into the same 340px box as Extended."""
+    wrapped=[]
+    current=''
+    for token in re.findall(r'[A-Za-z0-9_+./-]+|\s+|.', ' '.join(lines)):
+        if pin_text_width(current+token,13)>340 and current:
+            wrapped.append(current.rstrip())
+            current=token.lstrip()
+        else:
+            current+=token
+    if current.strip(): wrapped.append(current.rstrip())
+    if len(wrapped)>3 or any(pin_text_width(line,13)>340 for line in wrapped):
+        raise ValueError('Project description exceeds three pin-card lines')
+    return wrapped
+
+
+def pin_icon(name,x,y):
+    return f'<svg class="pin-icon" x="{x}" y="{y}" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="{PIN_ICONS[name]}"/></svg>'
+
+
 def render_project(definition, info, release, language):
-    title=definition['title']
-    body=text('heading',42,36,title,'style="font-size:19px"')
-    body+='<path d="M22 23h11v14H22zM24 34h7M24 27h4" fill="none" stroke="#8b949e" stroke-width="1.5"/>'
-    lines=definition[language]
-    body+=''.join(text('body',22,73+i*24,line) for i,line in enumerate(lines))
-    name=info['language'] or 'Source'
+    # Typography, geometry and Octicons match the upper GitHub Stats Extended pins.
+    # Upstream source and MIT notice: assets/licenses/github-stats-extended.txt.
+    title=info['name']
+    body='''<style>.pin-header{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#0969da}.pin-description{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif;fill:#1f2328}.pin-stat{font:400 12px 'Segoe UI',Ubuntu,Sans-Serif;fill:#1f2328}.pin-release{font:400 11px 'Segoe UI',Ubuntu,Sans-Serif;fill:#1f2328}.pin-icon{fill:#0969da}@media(prefers-color-scheme:dark){.pin-header,.pin-icon{fill:#58a6ff}.pin-description,.pin-stat,.pin-release{fill:#e6edf3}}</style>'''
+    body+=pin_icon('repo',25,22)+text('pin-header',50,35,title)
+    body+=''.join(text('pin-description',25,65.6+i*15.6,line) for i,line in enumerate(pin_description(definition[language])))
+    name=info['language']
     colors={'TypeScript':'#3178c6','JavaScript':'#f1e05a','Kotlin':'#a97bff','Python':'#3572a5','HTML':'#e34c26','Rust':'#dea584','C++':'#f34b7d'}
-    body+=f'<circle cx="27" cy="132" r="5" fill="{colors.get(name,"#8b949e")}"/>'+text('meta',40,137,name)+text('meta',188,137,f'☆ {info["stargazers_count"]}')
+    star_x=30
+    if name:
+        body+=f'<circle cx="30" cy="125" r="6" fill="{colors.get(name,"#8b949e")}"/>'+text('pin-stat',45,130,name)
+        star_x+=pin_text_width(name,12)+25
+    body+=pin_icon('star',star_x,118)+text('pin-stat',star_x+20,130,info['stargazers_count'])
     if release:
         if release.get('draft') or not release.get('published_at'):
             raise ValueError('Unpublished release')
         tag=release['tag_name']
         if len(tag)>28: raise ValueError('Unexpected release tag length')
         published=date.fromisoformat(release['published_at'][:10])
-        body+=text('meta',22,169,f'{tag} · {published}')
-    # Transparent trailing space separates wrapped cards in GitHub's sanitized HTML.
-    return svg(450,202,title,body,frame_height=189)
+        body+=text('pin-release',365,130,f'{tag} · {published}','text-anchor="end"')
+    return svg(390,150,title,body)
 
 
 def generate_visuals(output, calendar, collection, stats, projects):

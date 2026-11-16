@@ -1,4 +1,6 @@
 import importlib.util
+import io
+import json
 from pathlib import Path
 import subprocess
 import tempfile
@@ -135,6 +137,18 @@ class ProfileCardGeneratorTests(unittest.TestCase):
         with patch.object(cards, 'github_json', return_value=[repo]*100):
             with self.assertRaises(ValueError):
                 cards.fetch_public_repository_totals()
+
+    def test_commit_json_budget_is_bounded_without_changing_file_statistics(self):
+        payload=json.dumps({'files':[{'filename':'src/a.ts','additions':4,'deletions':3,'patch':'x'*(1024*1024)}]}).encode()
+        with patch.object(cards.urllib.request,'urlopen',return_value=io.BytesIO(payload)):
+            with self.assertRaises(ValueError):
+                cards.github_json('repos/public/repo/commits/test')
+        with patch.object(cards.urllib.request,'urlopen',return_value=io.BytesIO(payload)):
+            detail=cards.github_json('repos/public/repo/commits/test',max_bytes=4*1024*1024)
+            self.assertEqual(cards.language_totals([detail]), [('TypeScript',7)])
+        with patch.object(cards.urllib.request,'urlopen',return_value=io.BytesIO(b'x'*(4*1024*1024+1))):
+            with self.assertRaises(ValueError):
+                cards.github_json('repos/public/repo/commits/test',max_bytes=4*1024*1024)
 
 
 if __name__ == "__main__":
