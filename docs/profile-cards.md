@@ -8,18 +8,20 @@ The public profile embeds live project/version cards and contribution graphs, pl
 
 | File | Source and scope |
 | --- | --- |
-| `assets/generated/isometric.svg` | The official lowlighter/metrics isocalendar plugin, using the public contribution calendar for a full year. Upstream labels are normalized from “Commits” to “Contributions” because the calendar also counts PRs and issues. |
+| `assets/generated/isometric{,-mobile}.svg` | The public GraphQL contribution calendar for a full year, with explicit dates, counts and GitHub contribution levels. A native renderer lays out the whole year horizontally; mobile splits the same dates into two panels. Heights are linear in daily contribution counts. The current streak allows today to be unfinished. |
 | `assets/generated/development.svg` | One public GraphQL query: up to 20 external repositories contributed to in the past year (COMMIT, ISSUE, PULL_REQUEST; up to ten names displayed), plus issue and PR states in two explicitly labeled scopes: public repositories owned by the user, and public items authored by the user. Open, closed-unmerged and merged PR counts are disjoint. |
-| `assets/generated/recent-languages.svg` | Changed lines (additions + deletions) in recognized code/markup files from up to 30 public commit-search results in the last 14 days, up to 100 files per commit. Top eight languages are shown; percentages use the full recognized sample as denominator. Generated profile images and prose/data/config extensions are excluded. This bounded activity sample is not total authored code, proficiency or time. |
-| `assets/generated/contribution-3d-{light,dark}.svg` | Official github-profile-3d-contrib, using the supplied light/dark palette and public data accessible to the repository token. MAX_REPOS is explicitly 1000 so its paginated Stars/Forks aggregation covers the account's current public repositories, instead of silently stopping at the upstream default of 100. Its language chart groups contribution counts by the primary language of contributed repositories, not byte totals. |
+| `assets/generated/recent-languages.svg` | Changed lines (additions + deletions) in recognized code/markup files from up to 30 public commit-search results in the last 14 days, up to 100 files per commit. Every recognized language in the sample is shown by name; percentages use the full recognized sample as denominator. Generated profile images and prose/data/config extensions are excluded. This bounded activity sample is not total authored code, proficiency or time. |
+| `assets/generated/contribution-3d-{light,dark,mobile}.svg` | The same public daily calendar, rendered from a front-facing view with logarithmic column heights adapted from github-profile-3d-contrib. Light/dark images have explicit palettes; the mobile image follows the theme. Stars/Forks sum all pages of owned public repositories, including forks, with a 1000-repository bound. Hitting that bound fails instead of publishing partial totals. |
+| `assets/generated/contribution-details{,-mobile}.svg` | Separate language donut and contribution-type radar. All named languages returned by public `commitContributionsByRepository(maxRepositories:100)` are displayed individually; the donut denominator is the sum of contributions to repositories with a known primary language in that bounded query. Repositories without a primary language are excluded, never renamed or allocated to another language. There is no `other` bucket or top-five cut. Radar values are the five public contribution totals from the same collection; the radial scale is logarithmic. |
 | `assets/generated/articles.svg` | Up to four real posts, ordered by frontmatter date and slug, from the public `blog-src` directory of `tangyixiao/tangyixiao.github.io`. Dates and titles are not inferred from Git commit timestamps. |
 | `assets/generated/activity-mobile.svg` | Fourteen daily counts from the public contribution calendar, rendered at a native 420px width so mobile axis labels remain readable. |
+| `assets/generated/project-*-{zh,en}.svg` | Fourteen explicitly selected public repositories. Reviewed bilingual descriptions live in `scripts/profile-cards/projects.json`; language and Stars come from current public repository metadata. Four release cards also use the latest published release's real tag and publication date. |
 
-The generation job uploads a short-lived artifact. Branch runs produce reviewable artifacts only. On `main`, the publisher validates all seven SVGs, copies an exact filename allowlist, and commits only `assets/generated/`. An incomplete or failed render never replaces the checked-in cards. Publishing does not force-push or modify branch protection.
+The generation job uploads a short-lived artifact. Branch runs produce reviewable artifacts only. On `main`, the publisher validates all 39 SVGs, copies an exact filename allowlist, and commits only `assets/generated/`. An incomplete or failed render never replaces the checked-in cards. Publishing does not force-push or modify branch protection.
 
 The upstream Metrics recent-languages analyzer assumes `PushEvent.payload.commits`, which was absent during live validation and caused a TypeError. The recent-languages card therefore uses the bounded public commit API above.
 
-The Metrics contribution/status combination also exceeded the acceptable refresh time during live validation. The contribution/status card now uses the single bounded GraphQL query above, with no avatar downloads or repository cloning. Only the isometric calendar uses Metrics; the 3D landscape uses its dedicated official action.
+The Metrics contribution/status combination also exceeded the acceptable refresh time during live validation. All repository-generated cards now use bounded public API requests and native standard-library SVG renderers, with no avatar downloads, repository cloning, Docker builds, or upstream rendering action. `generate_articles.py` collects data and controls publication; `render_visuals.py` implements the approved layouts.
 
 ## Joint authorship
 
@@ -42,8 +44,8 @@ No Codeforces, Luogu, or other OI statistics widgets are added. These choices do
 
 ## Upstream versions and licenses
 
-- Metrics isocalendar action: `366f8b9dfe3a59656c67d5dcad9950f59c9bc96d`, MIT, lowlighter. The official action uses its upstream prebuilt container; its actual image digest is visible in generation logs.
-- 3D contribution action: `e235d118909be71eb7edb05482a3de4e76156df3`, MIT, SATO Yoshiyuki.
+- Calendar projection reference: Metrics `366f8b9dfe3a59656c67d5dcad9950f59c9bc96d`, MIT, lowlighter.
+- Logarithmic height reference: github-profile-3d-contrib `e235d118909be71eb7edb05482a3de4e76156df3`, MIT, SATO Yoshiyuki. The native layout adapts its `log10(count / 20 + 1) * 144 + 3` height formula.
 - Official source license texts are retained in `assets/licenses/`.
 
 The original text license does not cover third-party cards, screenshots or generated upstream assets. Refer to `CONTENT-LICENSE.md` and `assets/README.md`.

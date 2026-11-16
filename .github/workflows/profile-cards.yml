@@ -24,40 +24,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Test generator and credit rules
         run: python -B -m unittest discover -s tests -p test_profile_card_generator.py
-      - name: Isometric contribution calendar
-        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: tangyixiao
-          filename: isometric.svg
-          output_action: none
-          base: ''
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          config_timezone: Asia/Shanghai
-          config_animations: no
-          config_padding: 8, 8 + 0%
-          plugins_errors_fatal: yes
-          retries: 1
-          extras_css: |
-            svg { color: #455467; } h1,h2,h3 { color: #45648a; }
-            @media (prefers-color-scheme: dark) {
-              svg { color: #c5cdd7; } h1,h2,h3 { color: #9db9d1; }
-            }
-      - name: Three-dimensional contribution landscape
-        uses: yoshi389111/github-profile-3d-contrib@e235d118909be71eb7edb05482a3de4e76156df3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: tangyixiao
-          MAX_REPOS: '1000'
-          SETTING_JSON: scripts/profile-cards/landscape.json
-      - name: Collect generated calendars
-        run: |
-          mkdir -p assets/generated
-          cp /metrics_renders/isometric.svg assets/generated/isometric.svg
-          cp profile-3d-contrib/contribution-3d-light.svg assets/generated/contribution-3d-light.svg
-          cp profile-3d-contrib/contribution-3d-dark.svg assets/generated/contribution-3d-dark.svg
-      - name: Generate articles from public blog source and validate all cards
+      - name: Generate public profile cards and validate the complete artifact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/profile-cards/generate_articles.py --validate-all

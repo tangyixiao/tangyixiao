@@ -1,6 +1,7 @@
 """Generate a small linked article card from public source, with bounded inputs."""
 import argparse
 import base64
+import importlib.util
 from datetime import date, timedelta
 from html import escape
 import json
@@ -16,11 +17,15 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "assets/generated"
+_SPEC = importlib.util.spec_from_file_location('render_visuals', Path(__file__).with_name('render_visuals.py'))
+visuals = importlib.util.module_from_spec(_SPEC)
+_SPEC.loader.exec_module(visuals)
 BLOG_REPO = "tangyixiao/tangyixiao.github.io"
 CARD_FILES = (
     "isometric.svg", "development.svg", "contribution-3d-light.svg",
     "contribution-3d-dark.svg", "articles.svg", "recent-languages.svg", "activity-mobile.svg",
-)
+    "isometric-mobile.svg", "contribution-3d-mobile.svg", "contribution-details.svg", "contribution-details-mobile.svg",
+) + tuple(f'project-{project["slug"]}-{language}.svg' for project in visuals.PROJECTS for language in ('zh', 'en'))
 COAUTHOR = "Co-authored-by: Tangyixiao <115929632+tangyixiao@users.noreply.github.com>"
 COMMIT_MESSAGE = "docs: refresh generated profile cards\n\n" + COAUTHOR + "\n"
 
@@ -163,7 +168,7 @@ def complete_commit_search(endpoint):
 
 def render_recent_languages(totals, commit_count):
     total = sum(lines for _, lines in totals)
-    visible = totals[:8]
+    visible = totals
     height = 95 + max(1, len(visible)) * 31
     colors = {name: color for name, color in LANGUAGES.values()}
     rows = []
@@ -193,7 +198,7 @@ def fetch_collaboration():
         "user_prs_closed": "is:pr author:tangyixiao is:public is:closed is:unmerged",
         "user_prs_merged": "is:pr author:tangyixiao is:public is:merged",
     }
-    query = 'query{user(login:"tangyixiao"){contributionsCollection{contributionCalendar{weeks{contributionDays{date contributionCount}}}} repositoriesContributedTo(first:20,includeUserRepositories:false,privacy:PUBLIC,contributionTypes:[COMMIT,ISSUE,PULL_REQUEST]){totalCount nodes{nameWithOwner isPrivate}}}'
+    query = 'query{user(login:"tangyixiao"){contributionsCollection{totalCommitContributions totalIssueContributions totalPullRequestContributions totalPullRequestReviewContributions totalRepositoryContributions commitContributionsByRepository(maxRepositories:100){repository{nameWithOwner isPrivate primaryLanguage{name color}} contributions{totalCount}} contributionCalendar{weeks{contributionDays{date contributionCount contributionLevel}}}} repositoriesContributedTo(first:20,includeUserRepositories:false,privacy:PUBLIC,contributionTypes:[COMMIT,ISSUE,PULL_REQUEST]){totalCount nodes{nameWithOwner isPrivate}}}'
     query += " ".join(key + ":search(type:ISSUE,query:" + json.dumps(value) + "){issueCount}" for key, value in searches.items()) + "}"
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "tangyixiao-profile-cards"}
     token = os.environ.get("GITHUB_TOKEN")
@@ -210,7 +215,38 @@ def fetch_collaboration():
     if any(repo["isPrivate"] for repo in repositories["nodes"]):
         raise ValueError("Unexpected private repository in contribution card")
     calendar = [day for week in data["user"]["contributionsCollection"]["contributionCalendar"]["weeks"] for day in week["contributionDays"]]
-    return repositories, {key: data[key]["issueCount"] for key in searches}, calendar
+    return repositories, {key: data[key]["issueCount"] for key in searches}, calendar, data['user']['contributionsCollection']
+
+
+def fetch_public_repository_totals():
+    stars = forks = 0
+    for page in range(1, 11):
+        repositories = github_json(f'users/tangyixiao/repos?type=owner&per_page=100&page={page}')
+        for repository in repositories:
+            if repository['private'] or repository['owner']['login'].lower() != 'tangyixiao':
+                raise ValueError('Unexpected repository in public totals')
+            stars += repository['stargazers_count']
+            forks += repository['forks_count']
+        if len(repositories) < 100:
+            return {'stars': stars, 'forks': forks}
+    raise ValueError('Public repository pagination exceeded 1000; refusing partial totals')
+
+
+def fetch_projects():
+    projects = []
+    for project in visuals.PROJECTS:
+        endpoint = 'repos/tangyixiao/' + project['slug']
+        info = github_json(endpoint)
+        release = github_json(endpoint + '/releases/latest') if project.get('release') else None
+        projects.append((info, release))
+    return projects
+
+
+def github_palette(text):
+    colors = {'45648a':'0969da','455467':'1f2328','759180':'0969da','d9e1e8':'d1d9e0','9db9d1':'58a6ff','c5cdd7':'e6edf3','98ad9f':'58a6ff','65758a':'59636e','a5b0bd':'9198a1','263c32':'12243a','dce6e0':'ddf4ff'}
+    for before,after in colors.items():
+        text = re.sub(before, after, text, flags=re.I)
+    return text
 
 
 def render_mobile_activity(calendar):
@@ -299,15 +335,13 @@ def main():
     (OUTPUT / "articles.svg").write_text(render_articles(articles), encoding="utf-8")
     totals, commit_count = fetch_recent_languages()
     (OUTPUT / "recent-languages.svg").write_text(render_recent_languages(totals, commit_count), encoding="utf-8")
-    repositories, counts, calendar = fetch_collaboration()
+    repositories, counts, calendar, collection = fetch_collaboration()
     (OUTPUT / "development.svg").write_text(render_collaboration(repositories, counts), encoding="utf-8")
     (OUTPUT / "activity-mobile.svg").write_text(render_mobile_activity(calendar), encoding="utf-8")
-    isometric = OUTPUT / "isometric.svg"
-    if isometric.exists():
-        # GitHub's calendar counts contributions (including PRs/issues), not just commits.
-        text = isometric.read_text(encoding="utf-8")
-        text = text.replace("Commits streaks", "Contribution streaks").replace("Commits per day", "Contributions per day")
-        isometric.write_text(text, encoding="utf-8")
+    visuals.generate_visuals(OUTPUT, calendar, collection, fetch_public_repository_totals(), fetch_projects())
+    for name in ('articles.svg', 'recent-languages.svg', 'development.svg', 'activity-mobile.svg'):
+        path = OUTPUT / name
+        path.write_text(github_palette(path.read_text(encoding='utf-8')), encoding='utf-8')
     if args.validate_all:
         validate_cards(OUTPUT)
     print(json.dumps({"articles": len(articles), "slugs": [item["slug"] for item in articles], "recent_commits": commit_count, "language_changes": totals, "public_collaboration": counts}))
