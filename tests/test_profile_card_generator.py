@@ -60,6 +60,17 @@ class ProfileCardGeneratorTests(unittest.TestCase):
         self.assertIn("40.0%", text)
         self.assertIn("1 public commits sampled", text)
 
+    def test_collaboration_labels_do_not_merge_owner_and_author_scopes(self):
+        counts = {prefix + "_" + key: number for prefix in ("own", "user") for key, number in {"issues_open": 1, "issues_closed": 2, "prs_open": 3, "prs_closed": 4, "prs_merged": 5}.items()}
+        svg = cards.render_collaboration({"totalCount": 1, "nodes": [{"nameWithOwner": "public/repo"}]}, counts)
+        root = ET.fromstring(svg)
+        text = "".join(root.itertext())
+        self.assertIn("On my public repositories", text)
+        self.assertIn("Created by me", text)
+        self.assertIn("3 open · 5 merged · 4 closed", text)
+        with self.assertRaises(ValueError):
+            cards.render_collaboration({"totalCount": 1, "nodes": [{"nameWithOwner": 'bad/"path'}]}, counts)
+
 
 if __name__ == "__main__":
     unittest.main()

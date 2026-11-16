@@ -158,6 +158,65 @@ def render_recent_languages(totals, commit_count):
 <text class="heading" x="20" y="30">Recent languages</text><text class="scope" x="20" y="53">Changed lines · last 14 days · {commit_count} public commits sampled</text>{''.join(rows)}</svg>'''
 
 
+def fetch_collaboration():
+    # One public-data query avoids unbounded repository scans and avatar requests.
+    searches = {
+        "own_issues_open": "is:issue user:tangyixiao is:public is:open",
+        "own_issues_closed": "is:issue user:tangyixiao is:public is:closed",
+        "own_prs_open": "is:pr user:tangyixiao is:public is:open",
+        "own_prs_closed": "is:pr user:tangyixiao is:public is:closed is:unmerged",
+        "own_prs_merged": "is:pr user:tangyixiao is:public is:merged",
+        "user_issues_open": "is:issue author:tangyixiao is:public is:open",
+        "user_issues_closed": "is:issue author:tangyixiao is:public is:closed",
+        "user_prs_open": "is:pr author:tangyixiao is:public is:open",
+        "user_prs_closed": "is:pr author:tangyixiao is:public is:closed is:unmerged",
+        "user_prs_merged": "is:pr author:tangyixiao is:public is:merged",
+    }
+    query = 'query{user(login:"tangyixiao"){repositoriesContributedTo(first:20,includeUserRepositories:false,privacy:PUBLIC,contributionTypes:[COMMIT,ISSUE,PULL_REQUEST]){totalCount nodes{nameWithOwner isPrivate}}}'
+    query += " ".join(key + ":search(type:ISSUE,query:" + json.dumps(value) + "){issueCount}" for key, value in searches.items()) + "}"
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "tangyixiao-profile-cards"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise ValueError("The public collaboration query requires the Actions repository token")
+    headers["Authorization"] = "Bearer " + token
+    request = urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query": query}).encode(), headers=headers, method="POST")
+    with urllib.request.urlopen(request, timeout=30) as response:
+        result = json.loads(response.read(1024 * 1024))
+    if result.get("errors"):
+        raise ValueError("Public collaboration query failed")
+    data = result["data"]
+    repositories = data["user"]["repositoriesContributedTo"]
+    if any(repo["isPrivate"] for repo in repositories["nodes"]):
+        raise ValueError("Unexpected private repository in contribution card")
+    return repositories, {key: data[key]["issueCount"] for key in searches}
+
+
+def render_collaboration(repositories, counts):
+    names = sorted(repo["nameWithOwner"] for repo in repositories["nodes"])[:10]
+    rows = []
+    for index, name in enumerate(names):
+        if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", name):
+            raise ValueError("Invalid public repository handle")
+        shown = name if len(name) <= 55 else name[:52] + "…"
+        rows.append(f'<a href="https://github.com/{escape(name, quote=True)}"><text class="label" x="20" y="{76+index*24}">↗ {escape(shown)}</text></a>')
+    if not names:
+        rows.append('<text class="label" x="20" y="76">No matching public repositories</text>')
+    y = 108 + max(1, len(names)) * 24
+    rows.append(f'<text class="heading" x="20" y="{y}">Issues &amp; pull requests</text>')
+    for prefix, title in [("own", "On my public repositories"), ("user", "Created by me · public")]:
+        y += 30
+        rows.append(f'<text class="label" x="20" y="{y}">{title}</text>')
+        y += 25
+        rows.append(f'<text class="scope" x="20" y="{y}">Issues</text><text class="label" x="454" y="{y}" text-anchor="end">{counts[prefix+"_issues_open"]} open · {counts[prefix+"_issues_closed"]} closed</text>')
+        y += 25
+        rows.append(f'<text class="scope" x="20" y="{y}">PRs</text><text class="label" x="454" y="{y}" text-anchor="end">{counts[prefix+"_prs_open"]} open · {counts[prefix+"_prs_merged"]} merged · {counts[prefix+"_prs_closed"]} closed</text>')
+    height = y + 23
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="480" height="{height}" viewBox="0 0 480 {height}" role="img" aria-label="Public open-source contributions and collaboration">
+<style>text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.frame{{fill:#fff;stroke:#d9e1e8}}.heading{{fill:#45648a;font-size:17px;font-weight:600}}.label{{fill:#455467;font-size:14px}}.scope{{fill:#65758a;font-size:12px}}@media(prefers-color-scheme:dark){{.frame{{fill:#0d1117;stroke:#30363d}}.heading{{fill:#9db9d1}}.label{{fill:#c5cdd7}}.scope{{fill:#a5b0bd}}}}</style>
+<rect class="frame" x=".5" y=".5" width="479" height="{height-1}" rx="6"/>
+<text class="heading" x="20" y="30">Open-source contributions</text><text class="scope" x="20" y="52">{repositories["totalCount"]} public repositories · last year</text>{''.join(rows)}</svg>'''
+
+
 def validate_cards(directory):
     for name in CARD_FILES:
         path = directory / name
@@ -199,9 +258,11 @@ def main():
     (OUTPUT / "articles.svg").write_text(render_articles(articles), encoding="utf-8")
     totals, commit_count = fetch_recent_languages()
     (OUTPUT / "recent-languages.svg").write_text(render_recent_languages(totals, commit_count), encoding="utf-8")
+    repositories, counts = fetch_collaboration()
+    (OUTPUT / "development.svg").write_text(render_collaboration(repositories, counts), encoding="utf-8")
     if args.validate_all:
         validate_cards(OUTPUT)
-    print(json.dumps({"articles": len(articles), "slugs": [item["slug"] for item in articles], "recent_commits": commit_count, "language_changes": totals}))
+    print(json.dumps({"articles": len(articles), "slugs": [item["slug"] for item in articles], "recent_commits": commit_count, "language_changes": totals, "public_collaboration": counts}))
 
 
 if __name__ == "__main__":
