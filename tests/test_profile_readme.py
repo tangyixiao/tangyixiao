@@ -97,5 +97,20 @@ class ProfileReadmeTests(unittest.TestCase):
             for image in ["csp-preview.png", "blackhole-preview.png", "drawai-preview.png"]:
                 self.assertIn("assets/" + image, document)
 
+    def test_approved_cards_use_own_generated_assets_and_exclude_oi_widgets(self):
+        for document in [self.text, self.english]:
+            for image in ["isometric.svg", "contribution-3d-light.svg", "contribution-3d-dark.svg", "development.svg", "recent-languages.svg", "articles.svg"]:
+                self.assertIn("assets/generated/" + image, document)
+            self.assertIn("github-stats-extended.vercel.app/api/pin/", document)
+            self.assertIn("github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev", document)
+            self.assertNotIn("codeforces-readme-stats", document)
+            self.assertNotIn("api.jerryz.com.cn", document)
+            self.assertNotIn("lowlighter/metrics/blob/examples", document)
+
+    def test_technology_badges_keep_individual_colors(self):
+        for document in [self.text, self.english]:
+            for label, color in {"C%2B%2B": "00599C", "TypeScript": "3178C6", "Python": "FFD43B", "Kotlin": "7F52FF", "Rust": "CE422B", "LaTeX": "008080"}.items():
+                self.assertIn("/badge/" + label + "-" + color + "?", document)
+
 if __name__ == "__main__":
     unittest.main()

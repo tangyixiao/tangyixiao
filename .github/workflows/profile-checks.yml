@@ -1,0 +1,34 @@
+name: Check profile
+
+on:
+  push:
+    paths:
+      - README.md
+      - README.en.md
+      - assets/**
+      - scripts/profile-cards/**
+      - tests/**
+      - .github/workflows/**
+  pull_request:
+    paths:
+      - README.md
+      - README.en.md
+      - assets/**
+      - scripts/profile-cards/**
+      - tests/**
+      - .github/workflows/**
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - run: python -B -m unittest discover -s tests
+      - name: Validate checked-in card artifacts
+        run: |
+          python -c "import runpy; from pathlib import Path; m=runpy.run_path('scripts/profile-cards/generate_articles.py'); m['validate_cards'](Path('assets/generated'))"
+      - run: git diff --check

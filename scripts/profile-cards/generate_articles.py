@@ -228,7 +228,7 @@ def render_mobile_activity(calendar):
     circles = "".join(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="3" class="dot"/>' for x, y in points)
     labels = "".join(f'<text class="label" text-anchor="middle" x="{points[i][0]:.2f}" y="224">{days[i]["date"][5:]}</text>' for i in (0, 4, 8, 13))
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="420" height="250" viewBox="0 0 420 250" role="img" aria-label="Recent fourteen days of public GitHub contributions">
-<style>text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.frame{{fill:#fff;stroke:#d9e1e8}}.heading{{fill:#45648a;font-size:18px;font-weight:600}}.label{{fill:#455467;font-size:14px}}.area{{fill:#dce6e0}}.line{{stroke:#759180;stroke-width:2.5;fill:none}}.dot{{fill:#45648a}}.axis{{stroke:#d9e1e8}}@media(prefers-color-scheme:dark){{.frame{{fill:#0d1117;stroke:#30363d}}.heading{{fill:#9db9d1}}.label{{fill:#c5cdd7}}.area{{fill:#263c32}}.line{{stroke:#98ad9f}}.dot{{fill:#9db9d1}}.axis{{stroke:#30363d}}}}</style>
+<style>text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.frame{{fill:#fff;stroke:#d9e1e8}}.heading{{fill:#45648a;font-size:18px;font-weight:600}}.label{{fill:#455467;font-size:14px}}.area{{fill:#dce6e0}}.line{{stroke:#759180;stroke-width:2.5;fill:none}}.dot{{fill:#45648a}}.axis{{stroke:#d9e1e8;fill:none}}@media(prefers-color-scheme:dark){{.frame{{fill:#0d1117;stroke:#30363d}}.heading{{fill:#9db9d1}}.label{{fill:#c5cdd7}}.area{{fill:#263c32}}.line{{stroke:#98ad9f}}.dot{{fill:#9db9d1}}.axis{{stroke:#30363d}}}}</style>
 <rect class="frame" x=".5" y=".5" width="419" height="249" rx="6"/><text class="heading" x="20" y="31">Recent 14 days</text><text class="label" x="20" y="55">Contributions</text><path class="axis" d="M40 71V197H400"/><text class="label" x="32" y="83" text-anchor="end">{maximum}</text><text class="label" x="32" y="202" text-anchor="end">0</text><polygon class="area" points="{area}"/><polyline class="line" points="{line}"/>{circles}{labels}</svg>'''
 
 
@@ -302,6 +302,12 @@ def main():
     repositories, counts, calendar = fetch_collaboration()
     (OUTPUT / "development.svg").write_text(render_collaboration(repositories, counts), encoding="utf-8")
     (OUTPUT / "activity-mobile.svg").write_text(render_mobile_activity(calendar), encoding="utf-8")
+    isometric = OUTPUT / "isometric.svg"
+    if isometric.exists():
+        # GitHub's calendar counts contributions (including PRs/issues), not just commits.
+        text = isometric.read_text(encoding="utf-8")
+        text = text.replace("Commits streaks", "Contribution streaks").replace("Commits per day", "Contributions per day")
+        isometric.write_text(text, encoding="utf-8")
     if args.validate_all:
         validate_cards(OUTPUT)
     print(json.dumps({"articles": len(articles), "slugs": [item["slug"] for item in articles], "recent_commits": commit_count, "language_changes": totals, "public_collaboration": counts}))

@@ -19,10 +19,10 @@ I mainly study **competitive programming, mathematics and physics**. Outside pro
 <p align="center">
 <a href="https://github.com/tangyixiao">
 <picture>
-<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;hide_rank=true">
-<source media="(max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;hide_rank=true">
-<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
-<img src="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="GitHub overview: stars, commits, pull requests, issues and repositories contributed to">
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;hide_rank=true&amp;show=prs_merged,prs_merged_percentage">
+<source media="(max-width: 640px)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;hide_rank=true&amp;show=prs_merged,prs_merged_percentage">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d&amp;show=prs_merged,prs_merged_percentage">
+<img src="https://github-stats-extended.vercel.app/api?username=tangyixiao&amp;show_icons=true&amp;include_all_commits=true&amp;hide_border=false&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8&amp;show=prs_merged,prs_merged_percentage" width="390" alt="GitHub overview: stars, commits, pull requests, issues and repositories contributed to">
 </picture>
 </a>
 <a href="https://github.com/tangyixiao?tab=repositories">
@@ -44,6 +44,34 @@ I mainly study **competitive programming, mathematics and physics**. Outside pro
 <img src="https://streak-stats.demolab.com?user=tangyixiao&amp;hide_border=false&amp;border_radius=6&amp;card_width=840&amp;card_height=195&amp;background=FFFFFF&amp;border=D9E1E8&amp;stroke=D9E1E8&amp;ring=759180&amp;fire=759180&amp;currStreakNum=455467&amp;sideNums=455467&amp;currStreakLabel=45648A&amp;sideLabels=45648A&amp;dates=65758A" width="795" alt="Total contributions, current streak and longest streak">
 </picture>
 </a>
+</p>
+
+## Selected projects
+
+<p align="center">
+<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-workbuddy-connect-community&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-workbuddy-connect-community&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="dsh-workbuddy-connect-community">
+</picture></a>
+<a href="https://github.com/tangyixiao/drawai-video-studio"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=drawai-video-studio&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=drawai-video-studio&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="drawai-video-studio">
+</picture></a>
+<a href="https://github.com/tangyixiao/dsh-plugin-market"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-plugin-market&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=dsh-plugin-market&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="dsh-plugin-market">
+</picture></a>
+<a href="https://github.com/tangyixiao/tangyixiao.github.io"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=tangyixiao.github.io&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=0d1117&amp;title_color=9db9d1&amp;text_color=c5cdd7&amp;icon_color=98ad9f&amp;border_color=30363d">
+<img src="https://github-stats-extended.vercel.app/api/pin/?username=tangyixiao&amp;repo=tangyixiao.github.io&amp;card_width=390&amp;description_lines_count=3&amp;border_radius=6&amp;bg_color=ffffff&amp;title_color=45648a&amp;text_color=455467&amp;icon_color=759180&amp;border_color=d9e1e8" width="390" alt="tangyixiao.github.io">
+</picture></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/dsh-workbuddy-connect-community?style=flat-square&amp;color=45648a&amp;label=WorkBuddy" alt="WorkBuddy"></a>
+<a href="https://github.com/tangyixiao/drawai-video-studio/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/drawai-video-studio?style=flat-square&amp;color=45648a&amp;label=DrawAI" alt="DrawAI"></a>
+<a href="https://github.com/tangyixiao/dsh-plugin-market/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/dsh-plugin-market?style=flat-square&amp;color=45648a&amp;label=Plugin%20Market" alt="Plugin Market"></a>
+<a href="https://github.com/tangyixiao/tangyixiao.github.io/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/tangyixiao.github.io?style=flat-square&amp;color=45648a&amp;label=Website" alt="Website"></a>
 </p>
 
 ## Recent progress
@@ -115,6 +143,12 @@ The individual repositories document origins, compatibility and usage for commun
 
 </details>
 
+### Recent development and collaboration
+
+<p align="center"><img src="assets/generated/recent-languages.svg" width="500" alt="Languages in recent public code changes"></p>
+
+<p align="center"><img src="assets/generated/development.svg" width="500" alt="Notable contributions and issue/PR status"></p>
+
 ## Websites, visualization and expression
 
 **[Personal website](https://tangyixiao.github.io/) / [Source](https://github.com/tangyixiao/tangyixiao.github.io)**<br>
@@ -131,6 +165,8 @@ A Remotion / React video-production skill, from references, storyboards and shor
 
 ## A few things I have written
 
+<p align="center"><img src="assets/generated/articles.svg" width="500" alt="Recent articles from my public blog"></p>
+
 These posts are currently in Chinese.
 
 - **[From one problem to a reusable explanation](https://tangyixiao.github.io/blog/posts/problem-to-note.html)**<br>
@@ -143,18 +179,40 @@ These posts are currently in Chinese.
 ## Technologies used in my projects
 
 <p>
-  <img src="https://img.shields.io/badge/C%2B%2B-45648A?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/TypeScript-45648A?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Python-45648A?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Kotlin-45648A?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/Rust-45648A?style=flat-square&logo=rust&logoColor=white" alt="Rust">
-  <img src="https://img.shields.io/badge/LaTeX-45648A?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=flat-square&logo=python&logoColor=306998" alt="Python">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Rust-CE422B?style=flat-square&logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
 </p>
 
 - **Algorithms and resources:** C++, Python, LaTeX and Markdown.
 - **Web and plugins:** TypeScript, React, Three.js and Node.js.
 - **Clients and desktop tools:** Kotlin / Jetpack Compose and Rust / Tauri.
 - **Collaboration and records:** Git, GitHub, issues and pull requests.
+
+## Contribution history
+
+### Isometric calendar
+
+<p align="center"><img src="assets/generated/isometric.svg" width="500" alt="A full year of contribution activity"></p>
+
+### 3D contribution landscape
+
+<p align="center"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/generated/contribution-3d-dark.svg">
+<img src="assets/generated/contribution-3d-light.svg" width="800" alt="Three-dimensional GitHub contribution landscape">
+</picture></p>
+
+### Recent activity
+
+<p align="center"><picture>
+<source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="assets/generated/activity-mobile.svg">
+<source media="(max-width: 640px)" srcset="assets/generated/activity-mobile.svg">
+<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=tangyixiao&amp;bg_color=0d1117&amp;color=c5cdd7&amp;title_color=9db9d1&amp;line=98ad9f&amp;point=9db9d1&amp;area_color=263c32&amp;border_color=30363d&amp;area=true&amp;radius=6&amp;height=260&amp;days=31&amp;custom_title=Recent%2031%20days">
+<img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=tangyixiao&amp;bg_color=ffffff&amp;color=455467&amp;title_color=45648a&amp;line=759180&amp;point=45648a&amp;area_color=dce6e0&amp;border_color=d9e1e8&amp;area=true&amp;radius=6&amp;height=260&amp;days=31&amp;custom_title=Recent%2031%20days" width="800" alt="Recent contribution activity">
+</picture></p>
 
 ## Find me elsewhere
 
