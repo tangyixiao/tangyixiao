@@ -4,6 +4,7 @@ import subprocess
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from datetime import date, timedelta
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location("cards", ROOT / "scripts/profile-cards/generate_articles.py")
@@ -70,6 +71,17 @@ class ProfileCardGeneratorTests(unittest.TestCase):
         self.assertIn("3 open · 5 merged · 4 closed", text)
         with self.assertRaises(ValueError):
             cards.render_collaboration({"totalCount": 1, "nodes": [{"nameWithOwner": 'bad/"path'}]}, counts)
+
+    def test_mobile_activity_uses_real_fourteen_day_range_and_handles_zeroes(self):
+        days = [{"date": (date(2026, 11, 1) + timedelta(days=i)).isoformat(), "contributionCount": 0} for i in range(20)]
+        svg = cards.render_mobile_activity(days)
+        root = ET.fromstring(svg)
+        text = "".join(root.itertext())
+        self.assertIn("11-07", text)
+        self.assertIn("11-20", text)
+        self.assertNotIn("NaN", svg)
+        with self.assertRaises(ValueError):
+            cards.render_mobile_activity(days[:5])
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ OUTPUT = ROOT / "assets/generated"
 BLOG_REPO = "tangyixiao/tangyixiao.github.io"
 CARD_FILES = (
     "isometric.svg", "development.svg", "contribution-3d-light.svg",
-    "contribution-3d-dark.svg", "articles.svg", "recent-languages.svg",
+    "contribution-3d-dark.svg", "articles.svg", "recent-languages.svg", "activity-mobile.svg",
 )
 COAUTHOR = "Co-authored-by: Tangyixiao <115929632+tangyixiao@users.noreply.github.com>"
 COMMIT_MESSAGE = "docs: refresh generated profile cards\n\n" + COAUTHOR + "\n"
@@ -172,7 +172,7 @@ def fetch_collaboration():
         "user_prs_closed": "is:pr author:tangyixiao is:public is:closed is:unmerged",
         "user_prs_merged": "is:pr author:tangyixiao is:public is:merged",
     }
-    query = 'query{user(login:"tangyixiao"){repositoriesContributedTo(first:20,includeUserRepositories:false,privacy:PUBLIC,contributionTypes:[COMMIT,ISSUE,PULL_REQUEST]){totalCount nodes{nameWithOwner isPrivate}}}'
+    query = 'query{user(login:"tangyixiao"){contributionsCollection{contributionCalendar{weeks{contributionDays{date contributionCount}}}} repositoriesContributedTo(first:20,includeUserRepositories:false,privacy:PUBLIC,contributionTypes:[COMMIT,ISSUE,PULL_REQUEST]){totalCount nodes{nameWithOwner isPrivate}}}'
     query += " ".join(key + ":search(type:ISSUE,query:" + json.dumps(value) + "){issueCount}" for key, value in searches.items()) + "}"
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "tangyixiao-profile-cards"}
     token = os.environ.get("GITHUB_TOKEN")
@@ -188,7 +188,27 @@ def fetch_collaboration():
     repositories = data["user"]["repositoriesContributedTo"]
     if any(repo["isPrivate"] for repo in repositories["nodes"]):
         raise ValueError("Unexpected private repository in contribution card")
-    return repositories, {key: data[key]["issueCount"] for key in searches}
+    calendar = [day for week in data["user"]["contributionsCollection"]["contributionCalendar"]["weeks"] for day in week["contributionDays"]]
+    return repositories, {key: data[key]["issueCount"] for key in searches}, calendar
+
+
+def render_mobile_activity(calendar):
+    days = sorted(calendar, key=lambda day: day["date"])[-14:]
+    if len(days) != 14 or len({day["date"] for day in days}) != 14:
+        raise ValueError("Need fourteen unique public contribution days")
+    for day in days:
+        date.fromisoformat(day["date"])
+        if day["contributionCount"] < 0:
+            raise ValueError("Negative contribution count")
+    maximum = max(1, max(day["contributionCount"] for day in days))
+    points = [(40 + i * 360 / 13, 197 - day["contributionCount"] * 126 / maximum) for i, day in enumerate(days)]
+    line = " ".join(f"{x:.2f},{y:.2f}" for x, y in points)
+    area = f"40,197 {line} 400,197"
+    circles = "".join(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="3" class="dot"/>' for x, y in points)
+    labels = "".join(f'<text class="label" text-anchor="middle" x="{points[i][0]:.2f}" y="224">{days[i]["date"][5:]}</text>' for i in (0, 4, 8, 13))
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="420" height="250" viewBox="0 0 420 250" role="img" aria-label="Recent fourteen days of public GitHub contributions">
+<style>text{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.frame{{fill:#fff;stroke:#d9e1e8}}.heading{{fill:#45648a;font-size:18px;font-weight:600}}.label{{fill:#455467;font-size:14px}}.area{{fill:#dce6e0}}.line{{stroke:#759180;stroke-width:2.5;fill:none}}.dot{{fill:#45648a}}.axis{{stroke:#d9e1e8}}@media(prefers-color-scheme:dark){{.frame{{fill:#0d1117;stroke:#30363d}}.heading{{fill:#9db9d1}}.label{{fill:#c5cdd7}}.area{{fill:#263c32}}.line{{stroke:#98ad9f}}.dot{{fill:#9db9d1}}.axis{{stroke:#30363d}}}}</style>
+<rect class="frame" x=".5" y=".5" width="419" height="249" rx="6"/><text class="heading" x="20" y="31">Recent 14 days</text><text class="label" x="20" y="55">Contributions</text><path class="axis" d="M40 71V197H400"/><text class="label" x="32" y="83" text-anchor="end">{maximum}</text><text class="label" x="32" y="202" text-anchor="end">0</text><polygon class="area" points="{area}"/><polyline class="line" points="{line}"/>{circles}{labels}</svg>'''
 
 
 def render_collaboration(repositories, counts):
@@ -258,8 +278,9 @@ def main():
     (OUTPUT / "articles.svg").write_text(render_articles(articles), encoding="utf-8")
     totals, commit_count = fetch_recent_languages()
     (OUTPUT / "recent-languages.svg").write_text(render_recent_languages(totals, commit_count), encoding="utf-8")
-    repositories, counts = fetch_collaboration()
+    repositories, counts, calendar = fetch_collaboration()
     (OUTPUT / "development.svg").write_text(render_collaboration(repositories, counts), encoding="utf-8")
+    (OUTPUT / "activity-mobile.svg").write_text(render_mobile_activity(calendar), encoding="utf-8")
     if args.validate_all:
         validate_cards(OUTPUT)
     print(json.dumps({"articles": len(articles), "slugs": [item["slug"] for item in articles], "recent_commits": commit_count, "language_changes": totals, "public_collaboration": counts}))
