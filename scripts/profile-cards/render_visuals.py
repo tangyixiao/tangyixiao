@@ -10,13 +10,13 @@ PROJECTS = json.loads(Path(__file__).with_name('projects.json').read_text(encodi
 CSS = '''text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}.frame{fill:#fff;stroke:#d1d9e0}.heading{font-size:20px;font-weight:600;fill:#0969da}.meta{font-size:14px;fill:#59636e}.body{font-size:16px;fill:#1f2328}.summary{font-size:16px;fill:#1f2328}.top{stroke:#c5d3c9;stroke-width:.5;stroke-linejoin:round}.left,.right{stroke-width:.35;stroke-linejoin:round}.l0{--top:#e3e9e6;--left:#c5d0ca;--right:#d2dbd6}.l1{--top:#9be9a8;--left:#60ad75;--right:#7bc38b}.l2{--top:#40c463;--left:#258741;--right:#31a34f}.l3{--top:#30a14e;--left:#1a6f34;--right:#23843f}.l4{--top:#216e39;--left:#124b26;--right:#195b30}.top{fill:var(--top)}.left{fill:var(--left);stroke:var(--left)}.right{fill:var(--right);stroke:var(--right)}@media(prefers-color-scheme:dark){.frame{fill:#0d1117;stroke:#30363d}.heading{fill:#58a6ff}.meta{fill:#a4acb5}.body,.summary{fill:#e6edf3}.top{stroke:#424d49}.l0{--top:#2b3431;--left:#1d2521;--right:#222c27}.l1{--top:#287843;--left:#17492b;--right:#1e5c34}.l2{--top:#38a257;--left:#21673a;--right:#2b8146}.l3{--top:#56d378;--left:#2d8747;--right:#3fab5b}.l4{--top:#9be9a8;--left:#55a76a;--right:#73c587}}'''
 
 
-def svg(width, height, title, body, mode=None):
+def svg(width, height, title, body, mode=None, frame_height=None):
     css = CSS
     if mode == 'light':
         css = css.split('@media')[0]
     elif mode == 'dark':
         css = css.replace('@media(prefers-color-scheme:dark){', '').rstrip('}') + '}'
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title, quote=True)}"><title>{escape(title)}</title><style>{css}</style><rect class="frame" x=".5" y=".5" width="{width-1}" height="{height-1}" rx="6"/>{body}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title, quote=True)}"><title>{escape(title)}</title><style>{css}</style><rect class="frame" x=".5" y=".5" width="{width-1}" height="{height-1 if frame_height is None else frame_height}" rx="6"/>{body}</svg>'
 
 
 def text(cls, x, y, value, extra=''):
@@ -190,7 +190,8 @@ def render_project(definition, info, release, language):
         if len(tag)>28: raise ValueError('Unexpected release tag length')
         published=date.fromisoformat(release['published_at'][:10])
         body+=text('meta',22,169,f'{tag} · {published}')
-    return svg(450,190,title,body)
+    # Transparent trailing space separates wrapped cards in GitHub's sanitized HTML.
+    return svg(450,202,title,body,frame_height=189)
 
 
 def generate_visuals(output, calendar, collection, stats, projects):
