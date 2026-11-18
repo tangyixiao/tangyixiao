@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "name": "tangyixiao",
+  "theme": "system",
+  "default_locale": "zh-CN",
+  "locales": [
+    {
+      "code": "zh-CN",
+      "label": "简体中文",
+      "directory": ""
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "directory": "en"
+    }
+  ],
+  "release": "tangyixiao",
+  "license_label": "CC BY-SA 4.0 (original profile text and arrangement)",
+  "links": {
+    "repository": "https://github.com/tangyixiao/tangyixiao",
+    "download": "https://github.com/tangyixiao",
+    "documentation": "https://github.com/tangyixiao/tangyixiao/blob/main/README.md",
+    "release": "https://github.com/tangyixiao/tangyixiao",
+    "license": "https://github.com/tangyixiao/tangyixiao/blob/main/CONTENT-LICENSE.md",
+    "report_issue": "https://github.com/tangyixiao/tangyixiao/issues",
+    "suggest_feature": "https://github.com/tangyixiao/tangyixiao",
+    "contribute": "https://github.com/tangyixiao/tangyixiao/pulls"
+  },
+  "copyright_notice": "Website template © 2026 Tang Yixiao and contributors",
+  "platforms": [
+    {
+      "name": "tangyixiao",
+      "href": "https://tangyixiao.github.io/tangyixiao/"
+    }
+  ],
+  "localized_links": {
+    "en": {
+      "documentation": "https://github.com/tangyixiao/tangyixiao/blob/main/README.en.md"
+    }
+  }
+}
