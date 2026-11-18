@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "description": "Tang Yixiao’s GitHub profile connects competitive programming, mathematics and physics with the tools developed along the way. Follow the profile to writing and projects."
+  },
+  "pages": {
+    "home": {
+      "title": "From a problem to a project · {project}"
+    },
+    "features": {
+      "title": "Features · {project}",
+      "description": "Tang Yixiao’s GitHub profile connects competitive programming, mathematics and physics with the tools developed along the way. Follow the profile to writing and projects."
+    },
+    "download": {
+      "title": "Get started · {project}",
+      "description": "Open the GitHub profile. The English link leads to its translated introduction."
+    },
+    "community": {
+      "title": "Community · {project}",
+      "description": "Find usage guidance, follow discussions and review changes to this project."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "download": "Get started",
+    "community": "Community"
+  },
+  "ui": {
+    "skip_link": "Skip to main content",
+    "navigation": "Main navigation",
+    "open_navigation": "Open navigation",
+    "close_navigation": "Close navigation",
+    "language": "Choose language",
+    "theme": "Choose theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "platforms": "Supported platforms",
+    "github": "GitHub",
+    "view_image": "View full illustration",
+    "feature_more": "Explore features",
+    "download": "Open the GitHub profile",
+    "release_notes": "Source repository",
+    "documentation": "Documentation",
+    "source": "Source repository",
+    "illustration": "First steps",
+    "license": "CC BY-SA 4.0 (original profile text and arrangement)"
+  },
+  "hero": {
+    "title": [
+      "From a problem to a project"
+    ],
+    "description": [
+      "Tang Yixiao’s GitHub profile connects competitive programming, mathematics and physics with the tools developed along the way. Follow the profile to writing and projects."
+    ],
+    "primary_action": "Open the GitHub profile",
+    "secondary_action": "Explore features"
+  },
+  "preview": {
+    "caption": "First steps",
+    "tabs": [
+      {
+        "label": "Get started",
+        "icon": "book"
+      }
+    ],
+    "items": [
+      {
+        "title": "Read the profile",
+        "description": "Open the GitHub profile. The English link leads to its translated introduction.",
+        "icon": "book"
+      },
+      {
+        "title": "Choose a thread",
+        "description": "Follow the personal website or blog to explore projects and explanations.",
+        "icon": "link"
+      }
+    ]
+  },
+  "features": {
+    "title": "Project features",
+    "groups": [
+      {
+        "title": "Competition and study",
+        "description": "The profile introduces OI, mathematics and physics, with links to writing on problem solving.",
+        "detail": "",
+        "icon": "layers"
+      },
+      {
+        "title": "Tools and experiments",
+        "description": "Explore coding tools, DeepSeek Harness community plugins and web visualization experiments through the project links.",
+        "detail": "",
+        "icon": "book"
+      }
+    ]
+  },
+  "getting_started": {
+    "title": "Get started · {project}",
+    "steps": [
+      {
+        "title": "Read the profile",
+        "description": "Open the GitHub profile. The English link leads to its translated introduction.",
+        "icon": "book"
+      },
+      {
+        "title": "Choose a thread",
+        "description": "Follow the personal website or blog to explore projects and explanations.",
+        "icon": "link"
+      }
+    ]
+  },
+  "community": {
+    "title": "Community · {project}",
+    "description": "Find usage guidance, follow discussions and review changes to this project.",
+    "links": [
+      {
+        "label": "Help and feedback",
+        "description": "Browse existing reports or describe a reproducible problem.",
+        "icon": "book"
+      },
+      {
+        "label": "Source repository",
+        "description": "Find the project and its maintenance links.",
+        "icon": "link"
+      },
+      {
+        "label": "Review changes",
+        "description": "Review open pull requests or prepare a contribution.",
+        "icon": "code"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "{copyright}"
+  }
+}
