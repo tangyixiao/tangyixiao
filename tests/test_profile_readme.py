@@ -11,10 +11,14 @@ class ProfileReadmeTests(unittest.TestCase):
         cls.english = README.with_name("README.en.md").read_text(encoding="utf-8")
 
     def test_bilingual_identity(self):
-        for token in ["唐一潇", "绍兴市第一中学", "高中生", "数学和物理"]:
+        for token in ["高中生", "数学和物理"]:
             self.assertIn(token, self.text)
-        for token in ["Tang Yixiao", "Shaoxing No.1 High School", "high-school student"]:
+        for token in ["唐一潇", "绍兴市第一中学"]:
+            self.assertNotIn(token, self.text)
+        for token in ["high-school student"]:
             self.assertIn(token, self.english)
+        for token in ["Tang Yixiao", "Shaoxing No.1 High School"]:
+            self.assertNotIn(token, self.english)
         self.assertIn("[English](README.en.md)", self.text)
         self.assertIn("[简体中文](README.md)", self.english)
 
@@ -45,7 +49,6 @@ class ProfileReadmeTests(unittest.TestCase):
             "https://github.com/tangyixiao/HarnessHub",
             "https://github.com/tangyixiao/drawai-video-studio",
             "https://github.com/tangyixiao/tangyixiao.github.io",
-            "https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template",
         ]:
             self.assertIn(url, self.text)
 

@@ -2,7 +2,7 @@
 
 ### Hi there 👋
 
-我是 **唐一潇**，一名在 **绍兴市第一中学** 读书的高中生。
+我是一名高中生开发者。
 
 平时主要学 **OI / 信息学竞赛、数学和物理**。做题之外，也在开发 AI 编程工具、DeepSeek Harness 社区插件，写一些网页和可视化实验。
 
@@ -121,7 +121,6 @@ CSP-J/S 2026 试题与选手文件归档。支持在线阅读试题、浏览代�
 <summary>更多学习资料与记录</summary>
 
 - [CSP-ChuSai](https://github.com/tangyixiao/CSP-ChuSai)：自制提高级初赛模拟卷、参考答案与解析，以及往届资料。自制试卷并非官方试题。
-- [绍兴一中 Beamer 模板](https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template)：用 LaTeX 整理演示文稿。
 - [tangyixiao-skills](https://github.com/tangyixiao/tangyixiao-skills)：个人使用的 Codex skills 备份与同步合集，保留各项来源和许可。
 
 两条之前记下的洛谷 AC 里程碑：

@@ -2,7 +2,7 @@
 
 ### Hi there 👋
 
-I'm **Tang Yixiao**, a high-school student at **Shaoxing No.1 High School**.
+I'm a high-school student and developer.
 
 I mainly study **competitive programming, mathematics and physics**. Outside problem solving, I build AI coding tools, community plugins for DeepSeek Harness, and small web and visualization experiments.
 
@@ -121,7 +121,6 @@ Two teaching and learning skills for AI assistants. The first focuses on OI expl
 <summary>More learning resources and records</summary>
 
 - [CSP-ChuSai](https://github.com/tangyixiao/CSP-ChuSai): self-made preliminary-round practice papers, solutions and explanations, alongside historical materials. The self-made papers are not official contest papers.
-- [Shaoxing No.1 High School Beamer Template](https://github.com/tangyixiao/Shaoxing-No.1-High-School-LaTeX-Beamer-Template): a LaTeX presentation template.
 - [tangyixiao-skills](https://github.com/tangyixiao/tangyixiao-skills): a backup and sync collection of personal Codex skills, retaining their sources and licenses.
 
 Two previously recorded Luogu milestones:
