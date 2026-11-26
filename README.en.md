@@ -2,7 +2,7 @@
 
 ### Hi there 👋
 
-I'm a high-school student and developer.
+I'm **Tang Yixiao**, a high-school student and developer.
 
 I mainly study **competitive programming, mathematics and physics**. Outside problem solving, I build AI coding tools, community plugins for DeepSeek Harness, and small web and visualization experiments.
 
@@ -10,7 +10,7 @@ I mainly study **competitive programming, mathematics and physics**. Outside pro
 - 🛠️ Building tools I want to use, then maintaining and improving them.
 - ✍️ Keeping explanations, derivations and experiment notes I can revisit later.
 
-**[Website](https://tangyixiao.github.io/)** · [Blog](https://tangyixiao.github.io/blog/) · **[简体中文](README.md)**
+**[Website](https://tangyixiao.github.io/)** · [Blog](https://tangyixiao.github.io/blog/) · [Luogu](https://www.luogu.com.cn/blog/TangyixiaoQAQ/) · **[简体中文](README.md)**
 
 ---
 
@@ -263,4 +263,12 @@ Some of the languages, frameworks, and tools used across my projects:
 
 ## Find me elsewhere
 
-[Website](https://tangyixiao.github.io/) · [GitHub projects](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
+[Website](https://tangyixiao.github.io/) · [Luogu blog](https://www.luogu.com.cn/blog/TangyixiaoQAQ/)<br>
+[GitHub projects](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
+
+<details>
+<summary>Other blogs and platforms</summary>
+
+[cnblogs](https://home.cnblogs.com/u/TangyixiaoQAQ) · [CSDN](https://blog.csdn.net/DCMyyds)
+
+</details>

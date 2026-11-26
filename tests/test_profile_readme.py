@@ -11,14 +11,12 @@ class ProfileReadmeTests(unittest.TestCase):
         cls.english = README.with_name("README.en.md").read_text(encoding="utf-8")
 
     def test_bilingual_identity(self):
-        for token in ["高中生", "数学和物理"]:
+        for token in ["唐一潇", "高中生", "数学和物理"]:
             self.assertIn(token, self.text)
-        for token in ["唐一潇", "绍兴市第一中学"]:
-            self.assertNotIn(token, self.text)
-        for token in ["high-school student"]:
+        self.assertNotIn("绍兴市第一中学", self.text)
+        for token in ["Tang Yixiao", "high-school student"]:
             self.assertIn(token, self.english)
-        for token in ["Tang Yixiao", "Shaoxing No.1 High School"]:
-            self.assertNotIn(token, self.english)
+        self.assertNotIn("Shaoxing No.1 High School", self.english)
         self.assertIn("[English](README.en.md)", self.text)
         self.assertIn("[简体中文](README.md)", self.english)
 
@@ -53,15 +51,15 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(url, self.text)
 
     def test_public_links(self):
-        self.assertIn("https://github.com/tangyixiao", self.text)
         for url in [
             "https://www.luogu.com.cn/blog/TangyixiaoQAQ/",
             "https://home.cnblogs.com/u/TangyixiaoQAQ",
             "https://blog.csdn.net/DCMyyds",
-            "https://space.bilibili.com/512272131",
+            "https://github.com/tangyixiao",
         ]:
-            self.assertNotIn(url, self.text)
-            self.assertNotIn(url, self.english)
+            self.assertIn(url, self.text)
+        self.assertNotIn("https://space.bilibili.com/512272131", self.text)
+        self.assertNotIn("https://space.bilibili.com/512272131", self.english)
 
     def test_selected_milestones(self):
         for token in ["2026.01", "1000 AC", "2026.06", "2000 AC"]:

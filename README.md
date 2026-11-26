@@ -2,7 +2,7 @@
 
 ### Hi there 👋
 
-我是一名高中生开发者。
+我是 **唐一潇**，一名高中生开发者。
 
 平时主要学 **OI / 信息学竞赛、数学和物理**。做题之外，也在开发 AI 编程工具、DeepSeek Harness 社区插件，写一些网页和可视化实验。
 
@@ -10,7 +10,7 @@
 - 🛠️ 把自己需要的功能做成工具，慢慢维护、改进。
 - ✍️ 把题解、推导和实验过程留下来，方便之后重新读懂。
 
-**[个人网站](https://tangyixiao.github.io/)** · [博客](https://tangyixiao.github.io/blog/) · **[English](README.en.md)**
+**[个人网站](https://tangyixiao.github.io/)** · [博客](https://tangyixiao.github.io/blog/) · [洛谷](https://www.luogu.com.cn/blog/TangyixiaoQAQ/) · **[English](README.en.md)**
 
 ---
 
@@ -261,4 +261,12 @@ DeepSeek Harness 的 WorkBuddy 社区连接插件。沿用 WorkBuddy / WorkBuddy
 
 ## 在其他地方找到我
 
-[个人网站](https://tangyixiao.github.io/) · [GitHub 项目](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull Requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
+[个人网站](https://tangyixiao.github.io/) · [洛谷博客](https://www.luogu.com.cn/blog/TangyixiaoQAQ/)<br>
+[GitHub 项目](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull Requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
+
+<details>
+<summary>其他博客与平台</summary>
+
+[博客园](https://home.cnblogs.com/u/TangyixiaoQAQ) · [CSDN](https://blog.csdn.net/DCMyyds)
+
+</details>
