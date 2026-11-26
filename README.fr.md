@@ -1,20 +1,20 @@
-<a href="https://tangyixiao.github.io/"><img src="assets/study-desk.png" width="160" align="right" alt="A hand-drawn study notebook, code and books"></a>
+[English](README.md) · [简体中文](README.zh-CN.md) · [Deutsch](README.de.md) · **Français** · [Русский](README.ru.md)
 
-### Hi there 👋
+### Bonjour, je suis Yixiao Tang
 
-I'm **Tang Yixiao**, a high-school student and developer.
+Ingénieur logiciel spécialisé dans **les agents de programmation IA, l'infrastructure développeur, les algorithmes et les simulations WebGL interactives**.
 
-I mainly study **competitive programming, mathematics and physics**. Outside problem solving, I build AI coding tools, community plugins for DeepSeek Harness, and small web and visualization experiments.
+Je conçois des outils qui rendent les workflows agentiques observables, reproductibles et rapides à itérer — ainsi que des logiciels système, des clients natifs et des expériences de physique numérique.
 
-- 🧩 Working through models, algorithms, proofs and implementations.
-- 🛠️ Building tools I want to use, then maintaining and improving them.
-- ✍️ Keeping explanations, derivations and experiment notes I can revisit later.
+- **Outillage agentique :** écosystèmes de plugins, passerelles de fournisseurs de modèles, diagnostics en lecture seule et workflows de livraison vérifiables.
+- **Systèmes & algorithmes :** outils performants en C++, Rust et TypeScript appuyés par des tests déterministes.
+- **Graphisme & physique :** simulations temps réel Three.js / WebGL de mécanique orbitale, de chaos et de lentilles gravitationnelles.
 
-**[Website](https://tangyixiao.github.io/)** · [Blog](https://tangyixiao.github.io/blog/) · [Luogu](https://www.luogu.com.cn/blog/TangyixiaoQAQ/) · **[简体中文](README.md)**
+**[Site web](https://tangyixiao.github.io/)** · **[Dépôts](https://github.com/tangyixiao?tab=repositories)** · **[Pull Requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)**
 
 ---
 
-## GitHub activity
+## Activité GitHub
 
 <p align="center">
 <a href="https://github.com/tangyixiao">
@@ -46,7 +46,9 @@ I mainly study **competitive programming, mathematics and physics**. Outside pro
 </a>
 </p>
 
-## Selected projects
+---
+
+## Projets sélectionnés
 
 <p align="center">
 <a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community"><picture>
@@ -67,72 +69,9 @@ I mainly study **competitive programming, mathematics and physics**. Outside pro
 </picture></a>
 </p>
 
-<p align="center">
-<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/dsh-workbuddy-connect-community?style=flat-square&amp;color=0969da&amp;label=WorkBuddy" alt="WorkBuddy"></a>
-<a href="https://github.com/tangyixiao/drawai-video-studio/releases"><img src="https://img.shields.io/github/v/release/tangyixiao/drawai-video-studio?style=flat-square&amp;color=0969da&amp;label=DrawAI" alt="DrawAI"></a>
-<a href="https://github.com/tangyixiao/dsh-plugin-market/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/dsh-plugin-market?style=flat-square&amp;color=0969da&amp;label=Plugin%20Market" alt="Plugin Market"></a>
-<a href="https://github.com/tangyixiao/tangyixiao.github.io/commits/main"><img src="https://img.shields.io/github/last-commit/tangyixiao/tangyixiao.github.io?style=flat-square&amp;color=0969da&amp;label=Website" alt="Website"></a>
-</p>
+### Agents de programmation IA & Outillage développeur
 
-## Recent progress
-
-Lately I have been organizing CSP resources and maintaining OJ tools, AI coding workflows and learning skills.
-
-<p align="center">
-<a href="https://github.com/tangyixiao/dsh-workbuddy-connect-community/releases/latest"><img src="assets/generated/project-dsh-workbuddy-connect-community-en.svg" width="390" alt="dsh-workbuddy-connect-community"></a>
-<a href="https://github.com/tangyixiao/dsh-pr-release-workspace/releases/latest"><img src="assets/generated/project-dsh-pr-release-workspace-en.svg" width="390" alt="dsh-pr-release-workspace"></a>
-<a href="https://github.com/tangyixiao/drawai-video-studio/releases/latest"><img src="assets/generated/project-drawai-video-studio-en.svg" width="390" alt="drawai-video-studio"></a>
-<a href="https://github.com/tangyixiao/OJ-NEXUS/releases/latest"><img src="assets/generated/project-OJ-NEXUS-en.svg" width="390" alt="OJ-NEXUS"></a>
-</p>
-
-## Competitive programming and learning
-
-I treat competitive programming as a long-term learning project: read the problem, build a model, analyze complexity and implement the idea. I also want the problems, resources and tools I organize to remain useful the next time I study.
-
-<p align="center">
-<a href="https://github.com/tangyixiao/CSP-2026"><img src="assets/generated/project-CSP-2026-en.svg" width="390" alt="CSP-2026"></a>
-<a href="https://github.com/tangyixiao/OJ-NEXUS"><img src="assets/generated/project-OJ-NEXUS-en.svg" width="390" alt="OJ-NEXUS"></a>
-<a href="https://github.com/tangyixiao/oi-coach"><img src="assets/generated/project-oi-coach-en.svg" width="390" alt="oi-coach"></a>
-<a href="https://github.com/tangyixiao/evidence-learning"><img src="assets/generated/project-evidence-learning-en.svg" width="390" alt="evidence-learning"></a>
-</p>
-
-<a href="https://tangyixiao.github.io/CSP-2026/"><img src="assets/csp-preview.png" width="800" alt="CSP-2026: screenshot of the live archive"></a>
-
-[Online archive](https://tangyixiao.github.io/CSP-2026/) · [Paper PDFs](https://tangyixiao.github.io/CSP-2026/papers/) · [Code reading and comparison](https://tangyixiao.github.io/CSP-2026/code/)
-
-<details>
-<summary>Projects and learning methods</summary>
-
-**[CSP-2026](https://github.com/tangyixiao/CSP-2026)**<br>
-An archive of CSP-J/S 2026 papers and contestant files. It supports reading papers, browsing code, side-by-side and inline comparisons, and downloads for post-contest study and review.
-
-
-
-
-**[OJ NEXUS](https://github.com/tangyixiao/OJ-NEXUS)**<br>
-A multi-OJ client primarily for Android, bringing together accounts, submissions, problems, contests, training and review. Notes, history and statistics are local-first; work on other platforms is ongoing.
-
-**[oi-coach](https://github.com/tangyixiao/oi-coach) / [evidence-learning](https://github.com/tangyixiao/evidence-learning)**<br>
-Two teaching and learning skills for AI assistants. The first focuses on OI explanations, graded hints, code review and post-contest reflection; the second collects study records, review methods and delayed practice for high-school learning. They are also part of my own ongoing effort to improve how I learn.
-
-</details>
-
-<details>
-<summary>More learning resources and records</summary>
-
-- [CSP-ChuSai](https://github.com/tangyixiao/CSP-ChuSai): self-made preliminary-round practice papers, solutions and explanations, alongside historical materials. The self-made papers are not official contest papers.
-- [tangyixiao-skills](https://github.com/tangyixiao/tangyixiao-skills): a backup and sync collection of personal Codex skills, retaining their sources and licenses.
-
-Two previously recorded Luogu milestones:
-
-- **2026.01 — 1000 AC**
-- **2026.06 — 2000 AC**
-
-</details>
-
-## AI coding tools and community plugins
-
-I am interested in how LLMs, agents and coding tools fit into practical workflows: where projects live, how sessions continue, how models connect and how failures can be diagnosed.
+Outils modulaires et observables autour des harnais d'agents, registres de plugins et livraisons vérifiables :
 
 <p align="center">
 <a href="https://github.com/tangyixiao/HarnessHub"><img src="assets/generated/project-HarnessHub-en.svg" width="390" alt="HarnessHub"></a>
@@ -141,22 +80,13 @@ I am interested in how LLMs, agents and coding tools fit into practical workflow
 <a href="https://github.com/tangyixiao/dsh-plugins-sync"><img src="assets/generated/project-dsh-plugins-sync-en.svg" width="390" alt="dsh-plugins-sync"></a>
 </p>
 
-<details>
-<summary>About these projects</summary>
-
-**[Harness Hub](https://github.com/tangyixiao/HarnessHub)**<br>
-A local-first desktop hub for AI coding. It registers projects, discovers local harnesses, manages supported terminal sessions, and shows activity, usage and Git changes observed during a session.
-
-**[WorkBuddy Connect Community](https://github.com/tangyixiao/dsh-workbuddy-connect-community)**<br>
-A community WorkBuddy connection plugin for DeepSeek Harness. It reuses WorkBuddy / WorkBuddy AI desktop sign-in for separate model access, context options and observed usage.
-
-**[DSH Plugin Market](https://github.com/tangyixiao/dsh-plugin-market) / [dsh-plugins-sync](https://github.com/tangyixiao/dsh-plugins-sync)**<br>
-A public plugin index and market entry point, alongside a repository of catalog snapshots from multiple sources. They make sources, versions, channels and conflicts easier to inspect when discovering plugins.
-
-</details>
+- **[HarnessHub](https://github.com/tangyixiao/HarnessHub)** (`Rust`) — Hub et outils de gestion pour harnais d'agents et extensions.
+- **[dsh-plugin-market](https://github.com/tangyixiao/dsh-plugin-market)** & **[dsh-plugins-sync](https://github.com/tangyixiao/dsh-plugins-sync)** (`JavaScript`) — Index indépendant de plugins et synchronisation multi-appareils avec installations reproductibles.
+- **[dsh-workbuddy-connect-community](https://github.com/tangyixiao/dsh-workbuddy-connect-community)** (`TypeScript`) — Plugin fournisseur de modèles maintenu par la communauté avec streaming.
+- **[tangyixiao-workflow](https://github.com/tangyixiao/tangyixiao-workflow)** (`JavaScript`) — CLI pour les notes de version, la vérification des tags Git et le suivi des artefacts.
 
 <details>
-<summary>Other DSH tools I maintain</summary>
+<summary>Autres plugins & diagnostics</summary>
 
 <p align="center">
 <a href="https://github.com/tangyixiao/dsh-pr-release-workspace"><img src="assets/generated/project-dsh-pr-release-workspace-en.svg" width="390" alt="dsh-pr-release-workspace"></a>
@@ -165,51 +95,37 @@ A public plugin index and market entry point, alongside a repository of catalog 
 <a href="https://github.com/tangyixiao/dsh-zcode-plan-bridge"><img src="assets/generated/project-dsh-zcode-plan-bridge-en.svg" width="390" alt="dsh-zcode-plan-bridge"></a>
 </p>
 
-The individual repositories document origins, compatibility and usage for community plugins and adapted projects.
+- **[dsh-provider-doctor](https://github.com/tangyixiao/dsh-provider-doctor)** (`TypeScript`) — Diagnostic de connexion en lecture seule regroupant hôte, plugins, enregistrement, identifiants et catalogue.
+- **[dsh-pr-release-workspace](https://github.com/tangyixiao/dsh-pr-release-workspace)** (`JavaScript`) — Espace latéral en lecture seule pour diffs de PR, commentaires, notes locales et vérifications de release.
+- **[dsh-version-manager](https://github.com/tangyixiao/dsh-version-manager)** (`JavaScript`) — Gestionnaire de versions de plugins et skills basé sur des instantanés vérifiables.
+- **[dsh-zcode-plan-bridge](https://github.com/tangyixiao/dsh-zcode-plan-bridge)** (`JavaScript`) — Passerelle de fournisseur de modèles avec streaming, entrée d'image et réutilisation de session.
 
 </details>
 
-### Recent development and collaboration
+### Développement récent & Open Source
 
-<p align="center"><img src="assets/generated/recent-languages.svg" width="500" alt="Languages in recent public code changes"></p>
+<p align="center"><img src="assets/generated/recent-languages.svg" width="500" alt="Recent code languages"></p>
 
-<p align="center"><img src="assets/generated/development.svg" width="500" alt="Notable contributions and issue/PR status"></p>
+<p align="center"><img src="assets/generated/development.svg" width="500" alt="Open-source contribution activity"></p>
 
-## Websites, visualization and expression
+### Graphisme interactif, Médias & Clients natifs
 
 <p align="center">
 <a href="https://github.com/tangyixiao/tangyixiao.github.io"><img src="assets/generated/project-tangyixiao.github.io-en.svg" width="390" alt="tangyixiao.github.io"></a>
 <a href="https://github.com/tangyixiao/drawai-video-studio"><img src="assets/generated/project-drawai-video-studio-en.svg" width="390" alt="drawai-video-studio"></a>
+<a href="https://github.com/tangyixiao/OJ-NEXUS"><img src="assets/generated/project-OJ-NEXUS-en.svg" width="390" alt="OJ-NEXUS"></a>
 </p>
 
-**[Personal website](https://tangyixiao.github.io/) / [Source](https://github.com/tangyixiao/tangyixiao.github.io)**<br>
-A home for projects, blog posts and small standalone experiments. Alongside pages and interactions, I enjoy exploring how mathematical and physical phenomena can be visualized and experimented with.
+- **[tangyixiao.github.io](https://github.com/tangyixiao/tangyixiao.github.io)** (`TypeScript` / `React` / `Three.js`) — Site personnel et laboratoire WebGL comprenant un explorateur du système solaire, une lentille gravitationnelle Gargantua, une dynamique à trois corps et un double pendule chaotique.
+- **[drawai-video-studio](https://github.com/tangyixiao/drawai-video-studio)** (`TypeScript`) — Moteur de génération vidéo programmatique basé sur des scènes Remotion éditables avec vérification visuelle.
+- **[OJ-NEXUS](https://github.com/tangyixiao/OJ-NEXUS)** (`Kotlin` / `Jetpack Compose`) — Client Android natif pour les plateformes d'algorithmique.
+- **[sublime-cph](https://github.com/tangyixiao/sublime-cph)**, **[sublime-contest-build](https://github.com/tangyixiao/sublime-contest-build)**, **[sublime-contest-complete](https://github.com/tangyixiao/sublime-contest-complete)** & **[sublime-sylvan-theme](https://github.com/tangyixiao/sublime-sylvan-theme)** (`Python`) — Compilation C++, tests automatisés, complétion locale via Ollama et thème sombre vert pin pour Sublime Text.
 
-<a href="https://tangyixiao.github.io/blackhole.html"><img src="assets/blackhole-preview.png" width="800" alt="Black-hole visualization running on my website"></a>
+---
 
-🌌 [Black hole and gravitational lensing](https://tangyixiao.github.io/blackhole.html) · [Three-body gravity](https://tangyixiao.github.io/threebody.html) · [Double pendulum and chaos](https://tangyixiao.github.io/thechao.html)
+## Stack technique
 
-**[DrawAI Video Studio](https://github.com/tangyixiao/drawai-video-studio)**<br>
-A Remotion / React video-production skill, from references, storyboards and short pilots to editable scenes, rendering and visual checks. I am also exploring how explanations and demonstrations can become easier to follow.
-
-<a href="https://github.com/tangyixiao/drawai-video-studio/tree/main/examples/paper-storyboard"><img src="assets/drawai-preview.png" width="800" alt="DrawAI: a frame from the paper storyboard example"></a>
-
-## A few things I have written
-
-<p align="center"><img src="assets/generated/articles.svg" width="500" alt="Recent articles from my public blog"></p>
-
-These posts are currently in Chinese.
-
-- **[From one problem to a reusable explanation](https://tangyixiao.github.io/blog/posts/problem-to-note.html)**<br>
-  Starting with a model and a simple baseline, then explaining observations, correctness, complexity and edge cases.
-- **[Keep the reasoning, keep the understanding](https://tangyixiao.github.io/blog/posts/proof-and-notes.html)**<br>
-  Notes should preserve conditions, reasons for each step and unresolved questions, alongside the result.
-- **[Understanding agents through a small experiment](https://tangyixiao.github.io/blog/posts/agent-experiment.html)**<br>
-  Using a bounded, checkable task to understand how tools, feedback and verification connect.
-
-## Technologies used in my projects
-
-Some of the languages, frameworks, and tools used across my projects:
+Principaux langages, frameworks et outils utilisés dans mes projets :
 
 <p>
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
@@ -220,21 +136,23 @@ Some of the languages, frameworks, and tools used across my projects:
   <img src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX">
 </p>
 
-- **Algorithms and resources:** C++, Python, LaTeX and Markdown.
-- **Web and plugins:** TypeScript, React, Three.js and Node.js.
-- **Clients and desktop tools:** Kotlin / Jetpack Compose and Rust / Tauri.
-- **Collaboration and records:** Git, GitHub, issues and pull requests.
+- **Systèmes & cœur :** Rust, C++, Python
+- **Web & outillage :** TypeScript, React, Three.js, Node.js
+- **Mobile & desktop :** Kotlin / Jetpack Compose, Tauri
+- **Ingénierie :** Git, GitHub Actions, tests unitaires et navigateur déterministes
 
-## Contribution history
+---
 
-### Isometric calendar
+## Historique des contributions
+
+### Calendrier isométrique
 
 <p align="center"><picture>
 <source media="(max-width: 640px)" srcset="assets/generated/isometric-mobile.svg">
 <img src="assets/generated/isometric.svg" width="800" alt="A full year of contribution activity">
 </picture></p>
 
-### 3D contribution landscape
+### Paysage 3D des contributions
 
 <p align="center"><picture>
 <source media="(max-width: 640px)" srcset="assets/generated/contribution-3d-mobile.svg">
@@ -243,7 +161,7 @@ Some of the languages, frameworks, and tools used across my projects:
 </picture></p>
 
 <details>
-<summary>Languages and contribution types</summary>
+<summary>Langages et types de contributions</summary>
 
 <p align="center"><picture>
 <source media="(max-width: 640px)" srcset="assets/generated/contribution-details-mobile.svg">
@@ -252,7 +170,7 @@ Some of the languages, frameworks, and tools used across my projects:
 
 </details>
 
-### Recent activity
+### Activité récente
 
 <p align="center"><picture>
 <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="assets/generated/activity-mobile.svg">
@@ -261,14 +179,8 @@ Some of the languages, frameworks, and tools used across my projects:
 <img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=tangyixiao&amp;bg_color=ffffff&amp;color=1f2328&amp;title_color=0969da&amp;line=0969da&amp;point=0969da&amp;area_color=ddf4ff&amp;border_color=d1d9e0&amp;area=true&amp;radius=6&amp;height=260&amp;days=31&amp;custom_title=Recent%2031%20days" width="800" alt="Recent contribution activity">
 </picture></p>
 
-## Find me elsewhere
+---
 
-[Website](https://tangyixiao.github.io/) · [Luogu blog](https://www.luogu.com.cn/blog/TangyixiaoQAQ/)<br>
-[GitHub projects](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)
+## Ailleurs
 
-<details>
-<summary>Other blogs and platforms</summary>
-
-[cnblogs](https://home.cnblogs.com/u/TangyixiaoQAQ) · [CSDN](https://blog.csdn.net/DCMyyds)
-
-</details>
+[Site web](https://tangyixiao.github.io/) · [Dépôts GitHub](https://github.com/tangyixiao?tab=repositories) · [Commits](https://github.com/search?q=author%3Atangyixiao&type=commits) · [Pull Requests](https://github.com/pulls?q=is%3Apr+author%3Atangyixiao)

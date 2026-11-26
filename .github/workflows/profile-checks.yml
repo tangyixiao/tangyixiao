@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - README.md
-      - README.en.md
+      - README.*.md
       - assets/**
       - scripts/profile-cards/**
       - tests/**
@@ -12,7 +12,7 @@ on:
   pull_request:
     paths:
       - README.md
-      - README.en.md
+      - README.*.md
       - assets/**
       - scripts/profile-cards/**
       - tests/**
