@@ -19,11 +19,11 @@ class ProfileReadmeTests(unittest.TestCase):
 
     def test_multilingual_files_and_links(self):
         self.assertFalse((ROOT / "README.en.md").exists(), "English is now the default README.md")
-        self.assertIn("Hi, I'm Yixiao Tang", self.docs["en"])
-        self.assertIn("你好，我是 Yixiao Tang", self.docs["zh"])
-        self.assertIn("Hallo, ich bin Yixiao Tang", self.docs["de"])
-        self.assertIn("Bonjour, je suis Yixiao Tang", self.docs["fr"])
-        self.assertIn("Привет, я Yixiao Tang", self.docs["ru"])
+        self.assertIn("Hi, I'm Adrian Werner Keller", self.docs["en"])
+        self.assertIn("你好，我是 Adrian Werner Keller", self.docs["zh"])
+        self.assertIn("Hallo, ich bin Adrian Werner Keller", self.docs["de"])
+        self.assertIn("Bonjour, je suis Adrian Werner Keller", self.docs["fr"])
+        self.assertIn("Привет, я Adrian Werner Keller", self.docs["ru"])
 
         for code, text in self.docs.items():
             for other_code, path in README_FILES.items():
