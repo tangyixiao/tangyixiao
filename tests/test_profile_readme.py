@@ -53,14 +53,15 @@ class ProfileReadmeTests(unittest.TestCase):
             self.assertIn(url, self.text)
 
     def test_public_links(self):
+        self.assertIn("https://github.com/tangyixiao", self.text)
         for url in [
             "https://www.luogu.com.cn/blog/TangyixiaoQAQ/",
             "https://home.cnblogs.com/u/TangyixiaoQAQ",
             "https://blog.csdn.net/DCMyyds",
             "https://space.bilibili.com/512272131",
-            "https://github.com/tangyixiao",
         ]:
-            self.assertIn(url, self.text)
+            self.assertNotIn(url, self.text)
+            self.assertNotIn(url, self.english)
 
     def test_selected_milestones(self):
         for token in ["2026.01", "1000 AC", "2026.06", "2000 AC"]:
